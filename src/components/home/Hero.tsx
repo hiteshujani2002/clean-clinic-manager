@@ -26,7 +26,7 @@ const Hero = () => {
             {/* Working Hours Card */}
             <div className="bg-primary/10 border border-primary/20 rounded-2xl p-4 sm:p-6 max-w-xs animate-scale-in">
               <div className="space-y-3">
-                <h3 className="font-semibold text-primary">Working Hours</h3>
+                <h3 className="font-semibold text-secondary">Working Hours</h3>
                 <div className="space-y-1 text-sm text-foreground">
                   <div className="flex justify-between">
                     <span>Monday - Friday</span>
@@ -39,7 +39,7 @@ const Hero = () => {
                 </div>
                 <div className="pt-2">
                   <div className="text-xs text-muted-foreground mb-2">Today: Tuesday 9:00PM</div>
-                  <Button className="w-full bg-primary hover:bg-primary/90 text-primary-foreground rounded-xl transition-all duration-300 hover:scale-105">
+                  <Button className="w-full bg-secondary hover:bg-secondary/90 text-secondary-foreground rounded-xl transition-all duration-300 hover:scale-105">
                     Book an Appointment
                   </Button>
                 </div>

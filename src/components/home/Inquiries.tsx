@@ -58,6 +58,9 @@ const Inquiries = () => {
                     <h3 className="font-semibold text-secondary mb-1">Phone</h3>
                     <p className="text-muted-foreground">(555) 123-4567</p>
                     <p className="text-sm text-muted-foreground">Emergency: (555) 911-HELP</p>
+                    <Button size="sm" className="mt-2 bg-secondary hover:bg-secondary/90 text-secondary-foreground rounded-lg">
+                      Emergency: (555) 911-HELP
+                    </Button>
                   </div>
                 </div>
               </CardContent>

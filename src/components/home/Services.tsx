@@ -45,7 +45,7 @@ const Services = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
           {services.map((service, index) => (
             <div key={index} className="text-center">
-              <div className="w-24 h-24 mx-auto mb-6 bg-primary rounded-3xl flex items-center justify-center text-4xl">
+              <div className="w-24 h-24 mx-auto mb-6 bg-secondary rounded-3xl flex items-center justify-center text-4xl">
                 {service.icon}
               </div>
               <h3 className="text-xl font-bold text-secondary mb-2">{service.title}</h3>
