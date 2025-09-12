@@ -18,21 +18,21 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 240 10% 3.9%;
 
-    /* Professional dental blue - darker for better visibility */
-    --primary: 210 100% 45%;
-    --primary-foreground: 0 0% 100%;
-    --primary-light: 210 100% 85%;
-    --primary-dark: 210 100% 35%;
+    /* Soft dental blue primary */
+    --primary: 210 70% 83%;
+    --primary-foreground: 218 75% 20%;
+    --primary-light: 210 70% 90%;
+    --primary-dark: 210 70% 75%;
     
     /* Dental brand colors */
-    --dental-primary: 210 100% 40%;
-    --dental-secondary: 160 75% 45%;
+    --dental-primary: 210 70% 83%;
+    --dental-secondary: 218 75% 20%;
     --dental-accent: 45 95% 55%;
 
-    /* Dark dental text */
-    --secondary: 240 6% 10%;
+    /* Deep navy secondary for CTAs */
+    --secondary: 218 75% 20%;
     --secondary-foreground: 0 0% 98%;
-    --secondary-light: 240 6% 20%;
+    --secondary-light: 218 75% 30%;
 
     /* Soft grays */
     --muted: 210 15% 96%;
@@ -56,7 +56,7 @@ All colors MUST be HSL.
     
     /* Dental specific gradients */
     --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-dark)));
-    --gradient-secondary: linear-gradient(135deg, hsl(var(--secondary)), hsl(160 75% 35%));
+    --gradient-secondary: linear-gradient(135deg, hsl(var(--secondary)), hsl(var(--secondary-light)));
     --gradient-hero: linear-gradient(135deg, hsl(var(--primary-light)), hsl(var(--background)));
     
     /* Shadows for depth */
@@ -93,14 +93,14 @@ All colors MUST be HSL.
     --popover: 210 25% 10%;
     --popover-foreground: 210 15% 95%;
 
-    --primary: 205 85% 62%;
-    --primary-foreground: 210 25% 8%;
-    --primary-light: 205 85% 20%;
-    --primary-dark: 205 85% 52%;
+    --primary: 210 70% 83%;
+    --primary-foreground: 218 75% 20%;
+    --primary-light: 210 70% 90%;
+    --primary-dark: 210 70% 75%;
 
-    --secondary: 160 75% 55%;
-    --secondary-foreground: 210 25% 8%;
-    --secondary-light: 160 75% 15%;
+    --secondary: 218 75% 20%;
+    --secondary-foreground: 0 0% 98%;
+    --secondary-light: 218 75% 30%;
 
     --muted: 210 20% 15%;
     --muted-foreground: 210 15% 65%;
