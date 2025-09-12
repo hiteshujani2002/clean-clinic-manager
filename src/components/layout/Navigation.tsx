@@ -76,8 +76,10 @@ const Navigation = () => {
 
           {/* Mobile Menu */}
           <div className="flex items-center space-x-2 md:hidden">
-            <Button variant="outline" size="sm">
-              <Phone className="w-4 h-4" />
+            <Button variant="outline" size="sm" asChild>
+              <a href="tel:+919167544950">
+                <Phone className="w-4 h-4" />
+              </a>
             </Button>
             <Sheet open={isOpen} onOpenChange={setIsOpen}>
               <SheetTrigger asChild>
