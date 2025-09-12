@@ -82,8 +82,8 @@ const Hero = () => {
           <div className="relative lg:order-first">
             <div className="relative z-10 rounded-3xl overflow-hidden animate-scale-in">
               <img 
-                src="/api/placeholder/600/500" 
-                alt="Happy woman with beautiful smile holding a toothbrush"
+                src="/lovable-uploads/ddb0b256-4a24-4d6e-ab23-2e2fa4f69452.png" 
+                alt="Modern dental office with professional equipment"
                 className="w-full h-[300px] sm:h-[400px] lg:h-[500px] object-cover"
               />
             </div>
