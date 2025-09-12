@@ -62,9 +62,15 @@ const Navigation = () => {
               <Phone className="w-4 h-4" />
               <span className="hidden lg:inline">Call Now</span>
             </Button>
-            <Button size="sm" className="gap-2 bg-secondary hover:bg-secondary/90 text-secondary-foreground rounded-full transition-all duration-300 hover:scale-105">
-              <Calendar className="w-4 h-4" />
-              Book My Appointment
+            <Button 
+              size="sm" 
+              className="gap-2 bg-secondary hover:bg-secondary/90 text-secondary-foreground rounded-full transition-all duration-300 hover:scale-105"
+              asChild
+            >
+              <a href="https://api.whatsapp.com/send/?phone=919167544950&text&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer">
+                <Calendar className="w-4 h-4" />
+                Book My Appointment
+              </a>
             </Button>
           </div>
 
@@ -106,9 +112,14 @@ const Navigation = () => {
                   </nav>
                   
                   <div className="flex flex-col space-y-3 pt-4 border-t">
-                    <Button className="gap-2 bg-secondary hover:bg-secondary/90 text-secondary-foreground rounded-full transition-all duration-300">
-                      <Calendar className="w-4 h-4" />
-                      Book My Appointment
+                    <Button 
+                      className="gap-2 bg-secondary hover:bg-secondary/90 text-secondary-foreground rounded-full transition-all duration-300"
+                      asChild
+                    >
+                      <a href="https://api.whatsapp.com/send/?phone=919167544950&text&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer">
+                        <Calendar className="w-4 h-4" />
+                        Book My Appointment
+                      </a>
                     </Button>
                   </div>
                 </div>

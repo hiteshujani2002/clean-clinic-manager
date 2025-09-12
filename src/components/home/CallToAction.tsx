@@ -16,9 +16,15 @@ const CallToAction = () => {
             </p>
           </div>
 
-          <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg rounded-full px-8 py-6 text-lg">
-            <Calendar className="w-5 h-5 mr-2" />
-            Book My Appointment
+          <Button 
+            size="lg" 
+            className="bg-primary hover:bg-primary/90 text-primary-foreground shadow-lg rounded-full px-8 py-6 text-lg"
+            asChild
+          >
+            <a href="https://api.whatsapp.com/send/?phone=919167544950&text&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer">
+              <Calendar className="w-5 h-5 mr-2" />
+              Book My Appointment
+            </a>
           </Button>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 pt-8">

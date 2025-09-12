@@ -39,8 +39,13 @@ const Hero = () => {
                 </div>
                 <div className="pt-2">
                   <div className="text-xs text-muted-foreground mb-2">Today: Tuesday 9:00PM</div>
-                  <Button className="w-full bg-secondary hover:bg-secondary/90 text-secondary-foreground rounded-xl transition-all duration-300 hover:scale-105">
-                    Book an Appointment
+                  <Button 
+                    className="w-full bg-secondary hover:bg-secondary/90 text-secondary-foreground rounded-xl transition-all duration-300 hover:scale-105"
+                    asChild
+                  >
+                    <a href="https://api.whatsapp.com/send/?phone=919167544950&text&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer">
+                      Book an Appointment
+                    </a>
                   </Button>
                 </div>
               </div>
