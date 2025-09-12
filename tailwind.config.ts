@@ -47,6 +47,9 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        "dental-primary": "hsl(var(--dental-primary))",
+        "dental-secondary": "hsl(var(--dental-secondary))",
+        "dental-accent": "hsl(var(--dental-accent))",
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
