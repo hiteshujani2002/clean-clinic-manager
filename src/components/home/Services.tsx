@@ -20,9 +20,9 @@ const Services = () => {
   ];
 
   return (
-    <section className="py-16 lg:py-24 bg-background">
+    <section className="pt-8 pb-8 lg:pt-12 lg:pb-8 bg-background">
       <div className="container mx-auto px-4">
-        <div className="text-center space-y-4 mb-16">
+        <div className="text-center space-y-4 mb-10">
           <div className="inline-block">
             <span className="text-sm font-medium text-muted-foreground tracking-wider uppercase">
               Our Services
