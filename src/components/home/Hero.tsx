@@ -18,8 +18,7 @@ const Hero = () => {
                 Your Perfect Smile Starts with <span className="text-secondary">Dr.Jyoti's Dental Care</span>
               </h1>
               <p className="text-base sm:text-lg text-muted-foreground max-w-lg">
-                Advanced dental care with a gentle touch. 
-                Book your appointment today.
+                Your smile is not your job, it's our ART!
               </p>
             </div>
 
@@ -29,16 +28,16 @@ const Hero = () => {
                 <h3 className="font-semibold text-secondary">Working Hours</h3>
                 <div className="space-y-1 text-sm text-foreground">
                   <div className="flex justify-between">
-                    <span>Monday - Friday</span>
-                    <span className="font-medium">9AM - 9PM</span>
+                    <span>Tuesday - Saturday</span>
+                    <span className="font-medium">10AM - 10PM</span>
                   </div>
                   <div className="flex justify-between">
-                    <span>Saturday, Sunday</span>
-                    <span className="font-medium">10AM - 6PM</span>
+                    <span>Sunday</span>
+                    <span className="font-medium">11:30AM - 3:00PM</span>
                   </div>
                 </div>
                 <div className="pt-2">
-                  <div className="text-xs text-muted-foreground mb-2">Today: Tuesday 9:00PM</div>
+                  <div className="text-xs text-muted-foreground mb-2">Monday Closed</div>
                   <Button 
                     className="w-full bg-secondary hover:bg-secondary/90 text-secondary-foreground rounded-xl transition-all duration-300 hover:scale-105"
                     asChild
@@ -77,7 +76,7 @@ const Hero = () => {
                 </div>
                 <div>
                   <h4 className="font-semibold text-sm">Expert Team</h4>
-                  <p className="text-xs text-muted-foreground">20+ years experience</p>
+                  <p className="text-xs text-muted-foreground">9 years experience</p>
                 </div>
               </div>
             </div>

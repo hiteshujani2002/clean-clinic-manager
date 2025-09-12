@@ -38,7 +38,7 @@ const Navigation = () => {
             />
             <div className="hidden sm:block">
               <h1 className="text-xl font-bold text-foreground">Dr.Jyoti's Dental Care</h1>
-              <p className="text-xs text-muted-foreground">Premium Dental Services</p>
+              <p className="text-xs text-muted-foreground">Cosmetic and General Dentistry</p>
             </div>
           </Link>
 
@@ -60,7 +60,7 @@ const Navigation = () => {
           <div className="hidden md:flex items-center space-x-3">
             <Button variant="outline" size="sm" className="gap-2">
               <Phone className="w-4 h-4" />
-              <span className="hidden lg:inline">Call Now</span>
+              <span className="hidden lg:inline">9167544950</span>
             </Button>
             <Button 
               size="sm" 
@@ -95,7 +95,7 @@ const Navigation = () => {
                     />
                     <div>
                       <h2 className="text-lg font-bold">Dr.Jyoti's Dental Care</h2>
-                      <p className="text-sm text-muted-foreground">Premium Dental Services</p>
+                      <p className="text-sm text-muted-foreground">Cosmetic and General Dentistry</p>
                     </div>
                   </div>
                   
