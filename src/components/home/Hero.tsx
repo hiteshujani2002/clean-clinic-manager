@@ -14,8 +14,8 @@ const Hero = () => {
                   Advanced Dental Care
                 </span>
               </div>
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-secondary leading-tight">
-                Your Perfect Smile Starts with <span className="text-primary">Dr.Jyoti's Dental Care</span>
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-primary leading-tight">
+                Your Perfect Smile Starts with <span className="text-secondary">Dr.Jyoti's Dental Care</span>
               </h1>
               <p className="text-base sm:text-lg text-muted-foreground max-w-lg">
                 Advanced dental care with a gentle touch. 
