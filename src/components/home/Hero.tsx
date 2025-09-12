@@ -4,8 +4,8 @@ import { Calendar, Phone, Star, Shield, Heart, Users } from 'lucide-react';
 const Hero = () => {
   return (
     <section className="relative overflow-hidden bg-background">
-      <div className="container mx-auto px-4 py-16 sm:py-20 lg:py-28">
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+      <div className="container mx-auto px-4 py-8 sm:py-12 lg:py-16">
+        <div className="grid lg:grid-cols-2 gap-6 lg:gap-8 items-start">
           {/* Content */}
           <div className="space-y-6 lg:space-y-8 animate-slide-up">
             <div className="space-y-4 lg:space-y-6">
