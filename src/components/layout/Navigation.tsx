@@ -36,6 +36,10 @@ const Navigation = () => {
               alt="Dr.Jyoti's Dental Care Logo" 
               className="h-12 w-auto"
             />
+            <div className="hidden sm:block">
+              <h1 className="text-xl font-bold text-foreground">Dr.Jyoti's Dental Care</h1>
+              <p className="text-xs text-muted-foreground">Premium Dental Services</p>
+            </div>
           </Link>
 
           {/* Desktop Navigation */}
@@ -77,12 +81,16 @@ const Navigation = () => {
               </SheetTrigger>
               <SheetContent side="right" className="w-80">
                 <div className="flex flex-col space-y-4 mt-8">
-                  <div className="flex items-center justify-center pb-4 border-b">
+                  <div className="flex items-center space-x-2 pb-4 border-b">
                     <img 
                       src="/lovable-uploads/74447014-333c-4b39-8432-e4bba289edda.png" 
                       alt="Dr.Jyoti's Dental Care Logo" 
                       className="h-10 w-auto"
                     />
+                    <div>
+                      <h2 className="text-lg font-bold">Dr.Jyoti's Dental Care</h2>
+                      <p className="text-sm text-muted-foreground">Premium Dental Services</p>
+                    </div>
                   </div>
                   
                   <nav className="flex flex-col space-y-2">
