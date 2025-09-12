@@ -9,25 +9,25 @@ All colors MUST be HSL.
 @layer base {
   :root {
     /* Dental clinic color palette */
-    --background: 0 0% 100%;
-    --foreground: 210 20% 15%;
+    --background: 0 0% 98%;
+    --foreground: 240 10% 3.9%;
 
     --card: 0 0% 100%;
-    --card-foreground: 210 20% 15%;
+    --card-foreground: 240 10% 3.9%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 210 20% 15%;
+    --popover-foreground: 240 10% 3.9%;
 
-    /* Professional dental blue */
-    --primary: 205 85% 52%;
-    --primary-foreground: 0 0% 100%;
-    --primary-light: 205 85% 92%;
-    --primary-dark: 205 85% 42%;
+    /* Light dental blue */
+    --primary: 198 100% 85%;
+    --primary-foreground: 240 10% 3.9%;
+    --primary-light: 198 100% 95%;
+    --primary-dark: 198 100% 75%;
 
-    /* Clean dental green accent */
-    --secondary: 160 75% 45%;
-    --secondary-foreground: 0 0% 100%;
-    --secondary-light: 160 75% 95%;
+    /* Dark dental text */
+    --secondary: 240 6% 10%;
+    --secondary-foreground: 0 0% 98%;
+    --secondary-light: 240 6% 20%;
 
     /* Soft grays */
     --muted: 210 15% 96%;

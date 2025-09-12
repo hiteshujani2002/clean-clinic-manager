@@ -64,9 +64,9 @@ const Navigation = () => {
               <Phone className="w-4 h-4" />
               <span className="hidden lg:inline">Call Now</span>
             </Button>
-            <Button size="sm" className="gap-2 bg-gradient-to-r from-primary to-secondary hover:from-primary-dark hover:to-secondary text-white">
+            <Button size="sm" className="gap-2 bg-secondary hover:bg-secondary/90 text-white rounded-full">
               <Calendar className="w-4 h-4" />
-              Book Appointment
+              Book My Appointment
             </Button>
             <Button variant="ghost" size="sm" asChild>
               <Link to="/dashboard" className="gap-2">
@@ -118,9 +118,9 @@ const Navigation = () => {
                   </nav>
                   
                   <div className="flex flex-col space-y-3 pt-4 border-t">
-                    <Button className="gap-2 bg-gradient-to-r from-primary to-secondary">
+                    <Button className="gap-2 bg-secondary hover:bg-secondary/90 rounded-full">
                       <Calendar className="w-4 h-4" />
-                      Book Appointment
+                      Book My Appointment
                     </Button>
                     <Button variant="outline" asChild>
                       <Link to="/dashboard" className="gap-2">

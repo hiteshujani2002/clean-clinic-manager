@@ -1,110 +1,77 @@
 import { Card, CardContent } from '@/components/ui/card';
-import { Star, Quote } from 'lucide-react';
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import { Star } from 'lucide-react';
 
 const Testimonials = () => {
   const testimonials = [
     {
-      name: "Sarah Johnson",
-      role: "Marketing Manager",
-      image: "/api/placeholder/80/80",
-      rating: 5,
-      text: "The team at SmileCare made my dental anxiety disappear. Dr. Smith was incredibly gentle and explained every step. My smile has never looked better!"
+      name: "Jeremy Curry",
+      avatar: "/api/placeholder/60/60",
+      rating: 5.0,
+      text: "I've always been anxious about visiting the dentist, but when I walked into SmileCare, I felt at ease. The staff was incredibly welcoming, and Dr. Wilson took the time to explain everything in detail. The treatment was completely painless, and the results exceeded my expectations.",
     },
     {
-      name: "Michael Chen", 
-      role: "Teacher",
-      image: "/api/placeholder/80/80",
-      rating: 5,
-      text: "Professional, clean, and efficient. The online booking system is fantastic and the staff always remembers my preferences. Highly recommend!"
+      name: "Helena Erickson",
+      avatar: "/api/placeholder/60/60", 
+      rating: 4.8,
+      text: "I had been putting off my dental check-up for years due to bad past experiences. A friend recommended SmileCare, and I'm so glad they did! Dr. Chen was kind, patient, and extremely thorough. I needed a filling, and it was done perfectly without any discomfort.",
     },
     {
-      name: "Emma Rodriguez",
-      role: "Nurse",
-      image: "/api/placeholder/80/80", 
-      rating: 5,
-      text: "After years of avoiding the dentist, SmileCare changed everything. The technology is impressive and the care is genuinely compassionate."
-    },
-    {
-      name: "David Thompson",
-      role: "Engineer",
-      image: "/api/placeholder/80/80",
-      rating: 5,
-      text: "My family has been coming here for 3 years. Great with kids, flexible scheduling, and always transparent about costs. Best dental office in town!"
+      name: "Sarah Mitchell", 
+      avatar: "/api/placeholder/60/60",
+      rating: 5.0,
+      text: "After years of being self-conscious about my smile, I finally decided to look into cosmetic dentistry. The team at SmileCare walked me through all my options and helped me choose the best treatment. They delivered exactly what they promised, and now I smile with confidence!",
     }
   ];
 
   return (
-    <section className="py-20 bg-muted/30">
+    <section className="py-16 lg:py-24 bg-background">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+        <div className="text-center space-y-4 mb-16">
+          <div className="inline-block">
+            <span className="text-sm font-medium text-muted-foreground tracking-wider uppercase">
+              Testimonials
+            </span>
+          </div>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-secondary">
             What Our Patients Say
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Don't just take our word for it. Here's what our patients have to say 
-            about their experience at SmileCare Dental.
-          </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {testimonials.map((testimonial, index) => (
-            <Card key={index} className="relative group hover:shadow-lg transition-all duration-300 border-0 bg-background">
-              <CardContent className="p-8">
-                {/* Quote icon */}
-                <div className="absolute -top-4 left-8">
-                  <div className="w-8 h-8 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center">
-                    <Quote className="w-4 h-4 text-white" />
-                  </div>
-                </div>
-
-                {/* Rating */}
-                <div className="flex items-center mb-4 pt-2">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="w-4 h-4 text-trust fill-current" />
-                  ))}
-                </div>
-
-                {/* Testimonial text */}
-                <p className="text-muted-foreground mb-6 leading-relaxed">
-                  "{testimonial.text}"
-                </p>
-
-                {/* Author info */}
-                <div className="flex items-center">
-                  <img 
-                    src={testimonial.image}
-                    alt={testimonial.name}
-                    className="w-12 h-12 rounded-full object-cover mr-4"
-                  />
+            <Card key={index} className="border-0 shadow-sm bg-card rounded-2xl">
+              <CardContent className="p-6">
+                <div className="flex items-center space-x-3 mb-4">
+                  <Avatar className="w-12 h-12">
+                    <AvatarImage src={testimonial.avatar} alt={testimonial.name} />
+                    <AvatarFallback>{testimonial.name.split(' ').map(n => n[0]).join('')}</AvatarFallback>
+                  </Avatar>
                   <div>
-                    <h4 className="font-semibold text-foreground">{testimonial.name}</h4>
-                    <p className="text-sm text-muted-foreground">{testimonial.role}</p>
+                    <h4 className="font-semibold text-secondary">{testimonial.name}</h4>
+                    <div className="flex items-center space-x-1">
+                      {[...Array(5)].map((_, i) => (
+                        <Star key={i} className="w-3 h-3 fill-trust text-trust" />
+                      ))}
+                      <span className="text-sm text-muted-foreground ml-1">{testimonial.rating}</span>
+                    </div>
                   </div>
                 </div>
+                
+                <p className="text-muted-foreground text-sm leading-relaxed">
+                  {testimonial.text}
+                </p>
               </CardContent>
             </Card>
           ))}
         </div>
 
-        {/* Stats Section */}
-        <div className="bg-gradient-to-r from-primary to-secondary rounded-2xl p-8 md:p-12 text-white text-center">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            <div>
-              <h3 className="text-3xl md:text-4xl font-bold mb-2">4.9★</h3>
-              <p className="text-sm opacity-90">Average Rating</p>
-            </div>
-            <div>
-              <h3 className="text-3xl md:text-4xl font-bold mb-2">10K+</h3>
-              <p className="text-sm opacity-90">Happy Patients</p>
-            </div>
-            <div>
-              <h3 className="text-3xl md:text-4xl font-bold mb-2">20+</h3>
-              <p className="text-sm opacity-90">Years Experience</p>
-            </div>
-            <div>
-              <h3 className="text-3xl md:text-4xl font-bold mb-2">99%</h3>
-              <p className="text-sm opacity-90">Satisfaction Rate</p>
-            </div>
+        <div className="text-center mt-12">
+          <div className="text-right max-w-6xl mx-auto">
+            <h3 className="text-xl font-bold text-secondary mb-2">Smiles That Speak</h3>
+            <p className="text-muted-foreground text-sm">
+              Here's what our patients say about their transformative experiences with us.
+            </p>
           </div>
         </div>
       </div>

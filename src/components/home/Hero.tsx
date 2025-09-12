@@ -3,47 +3,47 @@ import { Calendar, Phone, Star, Shield, Heart, Users } from 'lucide-react';
 
 const Hero = () => {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-primary-light via-background to-secondary-light">
+    <section className="relative overflow-hidden bg-background">
       <div className="container mx-auto px-4 py-20 lg:py-28">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Content */}
           <div className="space-y-8">
-            <div className="space-y-4">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight">
-                Your Perfect <span className="text-primary">Smile</span> Starts Here
+            <div className="space-y-6">
+              <div className="inline-block">
+                <span className="text-sm font-medium text-muted-foreground tracking-wider uppercase">
+                  Advanced Dental Care
+                </span>
+              </div>
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-secondary leading-tight">
+                Your Perfect Smile Starts with <span className="text-secondary">SmileCare</span>
               </h1>
               <p className="text-lg text-muted-foreground max-w-lg">
-                Experience exceptional dental care with modern technology, gentle treatments, 
-                and a team dedicated to your comfort and oral health.
+                Advanced dental care with a gentle touch. 
+                Book your appointment today.
               </p>
             </div>
 
-            {/* Trust Indicators */}
-            <div className="flex flex-wrap gap-6 items-center">
-              <div className="flex items-center space-x-2">
-                <div className="flex text-trust">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-4 h-4 fill-current" />
-                  ))}
+            {/* Working Hours Card */}
+            <div className="bg-primary rounded-2xl p-6 max-w-xs">
+              <div className="space-y-3">
+                <h3 className="font-semibold text-secondary">Working Hours</h3>
+                <div className="space-y-1 text-sm text-secondary/80">
+                  <div className="flex justify-between">
+                    <span>Monday - Friday</span>
+                    <span>9AM - 9PM</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span>Saturday, Sunday</span>
+                    <span>10AM - 6PM</span>
+                  </div>
                 </div>
-                <span className="text-sm text-muted-foreground">4.9/5 Rating</span>
+                <div className="pt-2">
+                  <div className="text-xs text-secondary/60 mb-2">Today: Tuesday 9:00PM</div>
+                  <Button className="w-full bg-secondary hover:bg-secondary/90 text-white rounded-xl">
+                    Book an Appointment
+                  </Button>
+                </div>
               </div>
-              <div className="flex items-center space-x-2">
-                <Users className="w-4 h-4 text-primary" />
-                <span className="text-sm text-muted-foreground">10,000+ Happy Patients</span>
-              </div>
-            </div>
-
-            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg" className="bg-gradient-to-r from-primary to-secondary hover:from-primary-dark hover:to-secondary text-white shadow-lg">
-                <Calendar className="w-5 h-5 mr-2" />
-                Book Your Appointment
-              </Button>
-              <Button size="lg" variant="outline" className="border-primary text-primary hover:bg-primary hover:text-white">
-                <Phone className="w-5 h-5 mr-2" />
-                Call (555) 123-4567
-              </Button>
             </div>
 
             {/* Features */}
@@ -79,32 +79,14 @@ const Hero = () => {
           </div>
 
           {/* Hero Image */}
-          <div className="relative">
-            <div className="relative z-10 rounded-2xl overflow-hidden shadow-2xl">
+          <div className="relative lg:order-first">
+            <div className="relative z-10 rounded-3xl overflow-hidden">
               <img 
-                src="/api/placeholder/600/400" 
-                alt="Modern dental office with happy patient and dentist"
+                src="/api/placeholder/600/500" 
+                alt="Happy woman with beautiful smile holding a toothbrush"
                 className="w-full h-[400px] lg:h-[500px] object-cover"
               />
-              {/* Overlay with booking card */}
-              <div className="absolute bottom-6 left-6 right-6">
-                <div className="bg-white/95 backdrop-blur-sm rounded-xl p-4 shadow-lg">
-                  <div className="flex items-center justify-between">
-                    <div>
-                      <p className="text-sm font-semibold text-foreground">Next Available</p>
-                      <p className="text-xs text-muted-foreground">Today, 2:30 PM</p>
-                    </div>
-                    <Button size="sm" className="bg-gradient-to-r from-primary to-secondary">
-                      Book Now
-                    </Button>
-                  </div>
-                </div>
-              </div>
             </div>
-            
-            {/* Background decoration */}
-            <div className="absolute -top-8 -right-8 w-32 h-32 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-full blur-3xl" />
-            <div className="absolute -bottom-8 -left-8 w-40 h-40 bg-gradient-to-br from-secondary/20 to-trust/20 rounded-full blur-3xl" />
           </div>
         </div>
       </div>
