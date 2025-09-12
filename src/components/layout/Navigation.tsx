@@ -13,9 +13,6 @@ const Navigation = () => {
     { name: 'Home', href: '/' },
     { name: 'Services', href: '/services' },
     { name: 'Doctors', href: '/doctors' },
-    { name: 'Pricing', href: '/pricing' },
-    { name: 'Gallery', href: '/gallery' },
-    { name: 'Blog & FAQs', href: '/blog' },
     { name: 'Contact', href: '/contact' },
   ];
 
@@ -68,12 +65,6 @@ const Navigation = () => {
               <Calendar className="w-4 h-4" />
               Book My Appointment
             </Button>
-            <Button variant="ghost" size="sm" asChild>
-              <Link to="/dashboard" className="gap-2">
-                <User className="w-4 h-4" />
-                <span className="hidden lg:inline">Patient Portal</span>
-              </Link>
-            </Button>
           </div>
 
           {/* Mobile Menu */}
@@ -121,12 +112,6 @@ const Navigation = () => {
                     <Button className="gap-2 bg-secondary hover:bg-secondary/90 rounded-full">
                       <Calendar className="w-4 h-4" />
                       Book My Appointment
-                    </Button>
-                    <Button variant="outline" asChild>
-                      <Link to="/dashboard" className="gap-2">
-                        <User className="w-4 h-4" />
-                        Patient Portal
-                      </Link>
                     </Button>
                   </div>
                 </div>
