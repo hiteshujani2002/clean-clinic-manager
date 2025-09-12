@@ -10,16 +10,19 @@ const Navigation = () => {
   const location = useLocation();
 
   const navigation = [
-    { name: 'Home', href: '/' },
-    { name: 'Services', href: '/services' },
-    { name: 'Doctors', href: '/doctors' },
-    { name: 'Contact', href: '/contact' },
+    { name: 'Home', href: '#home' },
+    { name: 'Services', href: '#services' },
+    { name: 'Doctors', href: '#doctors' },
+    { name: 'Testimonials', href: '#testimonials' },
+    { name: 'Contact', href: '#contact' },
   ];
 
-  const isActive = (path: string) => {
-    if (path === '/' && location.pathname === '/') return true;
-    if (path !== '/' && location.pathname.startsWith(path)) return true;
-    return false;
+  const scrollToSection = (href: string) => {
+    const element = document.querySelector(href);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+      setIsOpen(false);
+    }
   };
 
   return (
@@ -32,26 +35,22 @@ const Navigation = () => {
               <Smile className="w-6 h-6 text-white" />
             </div>
             <div className="hidden sm:block">
-              <h1 className="text-xl font-bold text-foreground">SmileCare</h1>
-              <p className="text-xs text-muted-foreground">Dental Clinic</p>
+              <h1 className="text-xl font-bold text-foreground">Dr.Jyoti's Dental Care</h1>
+              <p className="text-xs text-muted-foreground">Premium Dental Services</p>
             </div>
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-1">
+          <nav className="hidden lg:flex items-center space-x-6 mr-8">
             {navigation.map((item) => (
-              <Link
+              <button
                 key={item.name}
-                to={item.href}
-                className={cn(
-                  "px-3 py-2 text-sm font-medium rounded-md transition-colors hover:text-primary hover:bg-accent",
-                  isActive(item.href) 
-                    ? "text-primary bg-accent" 
-                    : "text-muted-foreground"
-                )}
+                onClick={() => scrollToSection(item.href)}
+                className="px-4 py-2 text-sm font-medium transition-colors hover:text-dental-primary text-muted-foreground relative group"
               >
                 {item.name}
-              </Link>
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-dental-primary transition-all duration-300 group-hover:w-full"></span>
+              </button>
             ))}
           </nav>
 
@@ -85,26 +84,20 @@ const Navigation = () => {
                       <Smile className="w-6 h-6 text-white" />
                     </div>
                     <div>
-                      <h2 className="text-lg font-bold">SmileCare</h2>
-                      <p className="text-sm text-muted-foreground">Dental Clinic</p>
+                      <h2 className="text-lg font-bold">Dr.Jyoti's Dental Care</h2>
+                      <p className="text-sm text-muted-foreground">Premium Dental Services</p>
                     </div>
                   </div>
                   
                   <nav className="flex flex-col space-y-2">
                     {navigation.map((item) => (
-                      <Link
+                      <button
                         key={item.name}
-                        to={item.href}
-                        onClick={() => setIsOpen(false)}
-                        className={cn(
-                          "px-3 py-3 text-sm font-medium rounded-md transition-colors hover:bg-accent",
-                          isActive(item.href) 
-                            ? "text-primary bg-accent" 
-                            : "text-muted-foreground hover:text-foreground"
-                        )}
+                        onClick={() => scrollToSection(item.href)}
+                        className="px-3 py-3 text-sm font-medium rounded-md transition-colors hover:bg-accent text-muted-foreground hover:text-foreground text-left"
                       >
                         {item.name}
-                      </Link>
+                      </button>
                     ))}
                   </nav>
                   
