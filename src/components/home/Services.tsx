@@ -58,19 +58,21 @@ const Services = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-6xl mx-auto">
           {services.map((service, index) => (
-            <div key={index} className="text-center">
-              <div className="w-24 h-24 mx-auto mb-6 bg-secondary rounded-3xl flex items-center justify-center text-4xl">
-                {service.icon}
+            <div key={index} className="bg-card rounded-2xl p-6 md:p-8 shadow-sm border border-border hover:shadow-md transition-shadow">
+              <div className="flex flex-col items-center text-center">
+                <div className="w-20 h-20 md:w-24 md:h-24 mb-4 md:mb-6 bg-secondary rounded-3xl flex items-center justify-center text-3xl md:text-4xl">
+                  {service.icon}
+                </div>
+                <h3 className="text-lg md:text-xl font-bold text-secondary mb-2">{service.title}</h3>
+                <p className="text-sm md:text-base text-muted-foreground mb-4 md:mb-6">{service.description}</p>
               </div>
-              <h3 className="text-xl font-bold text-secondary mb-2">{service.title}</h3>
-              <p className="text-muted-foreground mb-4">{service.description}</p>
-              <ul className="text-left space-y-2">
+              <ul className="space-y-2 md:space-y-3">
                 {service.items.map((item, itemIndex) => (
-                  <li key={itemIndex} className="text-sm text-muted-foreground flex items-start">
-                    <span className="text-secondary mr-2">•</span>
-                    {item}
+                  <li key={itemIndex} className="text-sm md:text-base text-muted-foreground flex items-start">
+                    <span className="text-secondary mr-2 md:mr-3 flex-shrink-0 mt-0.5">•</span>
+                    <span className="leading-relaxed">{item}</span>
                   </li>
                 ))}
               </ul>
