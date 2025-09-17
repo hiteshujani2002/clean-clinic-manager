@@ -3,8 +3,47 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Phone, Mail, MapPin, Clock } from 'lucide-react';
+import { useState } from 'react';
+import { useToast } from '@/hooks/use-toast';
 
 const Inquiries = () => {
+  const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+
+    try {
+      const response = await fetch('https://formspree.io/f/mandgpyv', {
+        method: 'POST',
+        body: formData,
+        headers: { 'Accept': 'application/json' },
+      });
+
+      if (response.ok) {
+        toast({
+          title: 'Message sent successfully!',
+          description: "Thank you for contacting us. We'll get back to you soon.",
+        });
+        form.reset();
+      } else {
+        throw new Error('Failed to send message');
+      }
+    } catch (error) {
+      toast({
+        title: 'Failed to send message',
+        description: 'Please try again or call us directly.',
+        variant: 'destructive',
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <section className="py-16 lg:py-24 bg-muted/30">
       <div className="container mx-auto px-4">
@@ -30,19 +69,25 @@ const Inquiries = () => {
               <CardTitle className="text-xl font-bold text-secondary">Send us a Message</CardTitle>
             </CardHeader>
             <CardContent className="space-y-4">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <Input placeholder="First Name" className="rounded-xl" />
-                <Input placeholder="Last Name" className="rounded-xl" />
-              </div>
-              <Input placeholder="Email Address" type="email" className="rounded-xl" />
-              <Input placeholder="Phone Number" type="tel" className="rounded-xl" />
-              <Textarea 
-                placeholder="Tell us about your dental needs or questions..."
-                className="min-h-32 rounded-xl resize-none"
-              />
-              <Button className="w-full bg-secondary hover:bg-secondary/90 text-white rounded-xl">
-                Send Message
-              </Button>
+              <form onSubmit={handleSubmit} className="space-y-4">
+                <input type="hidden" name="_subject" value="New inquiry from homepage" />
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <Input name="firstName" placeholder="First Name" className="rounded-xl" required />
+                  <Input name="lastName" placeholder="Last Name" className="rounded-xl" required />
+                </div>
+                <Input name="email" placeholder="Email Address" type="email" className="rounded-xl" required />
+                <Input name="phone" placeholder="Phone Number" type="tel" className="rounded-xl" required />
+                <Textarea 
+                  name="message"
+                  placeholder="Tell us about your dental needs or questions..."
+                  className="min-h-32 rounded-xl resize-none"
+                  required
+                />
+                <Button type="submit" disabled={isSubmitting} className="w-full bg-secondary hover:bg-secondary/90 text-white rounded-xl">
+                  {isSubmitting ? 'Sending...' : 'Send Message'}
+                </Button>
+              </form>
             </CardContent>
           </Card>
 
