@@ -41,11 +41,19 @@ const Testimonials = () => {
   ];
 
   const nextTestimonial = () => {
-    setCurrentIndex((prev) => (prev + 1) % testimonials.length);
+    setCurrentIndex((prev) => {
+      const isDesktop = window.innerWidth >= 768;
+      const step = isDesktop ? 3 : 1;
+      return (prev + step) >= testimonials.length ? 0 : prev + step;
+    });
   };
 
   const prevTestimonial = () => {
-    setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
+    setCurrentIndex((prev) => {
+      const isDesktop = window.innerWidth >= 768;
+      const step = isDesktop ? 3 : 1;
+      return prev - step < 0 ? Math.max(0, testimonials.length - step) : prev - step;
+    });
   };
 
   return (
@@ -83,44 +91,100 @@ const Testimonials = () => {
             <ChevronRight className="w-4 h-4" />
           </Button>
 
-          {/* Testimonial Card */}
-          <Card className="border-0 shadow-sm bg-card rounded-2xl animate-fade-in">
-            <CardContent className="p-8">
-              <div className="flex items-center space-x-4 mb-6">
-                <Avatar className="w-16 h-16">
-                  <AvatarImage src={testimonials[currentIndex].avatar} alt={testimonials[currentIndex].name} />
-                  <AvatarFallback className="text-lg">
-                    {testimonials[currentIndex].name.split(' ').map(n => n[0]).join('')}
-                  </AvatarFallback>
-                </Avatar>
-                <div>
-                  <h4 className="text-xl font-semibold text-secondary">{testimonials[currentIndex].name}</h4>
-                  <div className="flex items-center space-x-1 mt-1">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
-                    ))}
-                    <span className="text-sm text-muted-foreground ml-2">{testimonials[currentIndex].rating}</span>
+          {/* Testimonials Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 animate-fade-in">
+            {/* Mobile: Show single testimonial */}
+            <div className="block md:hidden">
+              <Card className="border-0 shadow-sm bg-card rounded-2xl">
+                <CardContent className="p-6">
+                  <div className="flex items-center space-x-3 mb-4">
+                    <Avatar className="w-12 h-12">
+                      <AvatarImage src={testimonials[currentIndex].avatar} alt={testimonials[currentIndex].name} />
+                      <AvatarFallback className="text-lg">
+                        {testimonials[currentIndex].name.split(' ').map(n => n[0]).join('')}
+                      </AvatarFallback>
+                    </Avatar>
+                    <div>
+                      <h4 className="text-lg font-semibold text-secondary">{testimonials[currentIndex].name}</h4>
+                      <div className="flex items-center space-x-1 mt-1">
+                        {[...Array(5)].map((_, i) => (
+                          <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
+                        ))}
+                        <span className="text-sm text-muted-foreground ml-2">{testimonials[currentIndex].rating}</span>
+                      </div>
+                    </div>
                   </div>
+                  
+                  <p className="text-muted-foreground text-sm leading-relaxed">
+                    "{testimonials[currentIndex].text}"
+                  </p>
+                </CardContent>
+              </Card>
+            </div>
+
+            {/* Desktop: Show 3 testimonials */}
+            {Array.from({ length: 3 }, (_, i) => {
+              const testimonialIndex = (currentIndex + i) % testimonials.length;
+              const testimonial = testimonials[testimonialIndex];
+              return (
+                <div key={testimonialIndex} className="hidden md:block">
+                  <Card className="border-0 shadow-sm bg-card rounded-2xl h-full">
+                    <CardContent className="p-6 h-full flex flex-col">
+                      <div className="flex items-center space-x-3 mb-4">
+                        <Avatar className="w-12 h-12">
+                          <AvatarImage src={testimonial.avatar} alt={testimonial.name} />
+                          <AvatarFallback className="text-sm">
+                            {testimonial.name.split(' ').map(n => n[0]).join('')}
+                          </AvatarFallback>
+                        </Avatar>
+                        <div>
+                          <h4 className="font-semibold text-secondary">{testimonial.name}</h4>
+                          <div className="flex items-center space-x-1 mt-1">
+                            {[...Array(5)].map((_, starIndex) => (
+                              <Star key={starIndex} className="w-3 h-3 fill-yellow-400 text-yellow-400" />
+                            ))}
+                            <span className="text-xs text-muted-foreground ml-1">{testimonial.rating}</span>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <p className="text-muted-foreground text-sm leading-relaxed flex-grow">
+                        "{testimonial.text}"
+                      </p>
+                    </CardContent>
+                  </Card>
                 </div>
-              </div>
-              
-              <p className="text-muted-foreground text-base leading-relaxed">
-                "{testimonials[currentIndex].text}"
-              </p>
-            </CardContent>
-          </Card>
+              );
+            })}
+          </div>
 
           {/* Dots Indicator */}
           <div className="flex justify-center space-x-2 mt-6">
-            {testimonials.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => setCurrentIndex(index)}
-                className={`w-2 h-2 rounded-full transition-colors ${
-                  index === currentIndex ? 'bg-primary' : 'bg-muted-foreground/30'
-                }`}
-              />
-            ))}
+            {/* Mobile dots - show all testimonials */}
+            <div className="flex md:hidden space-x-2">
+              {testimonials.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentIndex(index)}
+                  className={`w-2 h-2 rounded-full transition-colors ${
+                    index === currentIndex ? 'bg-primary' : 'bg-muted-foreground/30'
+                  }`}
+                />
+              ))}
+            </div>
+            
+            {/* Desktop dots - show sets of 3 */}
+            <div className="hidden md:flex space-x-2">
+              {Array.from({ length: Math.ceil(testimonials.length / 3) }, (_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentIndex(index * 3)}
+                  className={`w-2 h-2 rounded-full transition-colors ${
+                    Math.floor(currentIndex / 3) === index ? 'bg-primary' : 'bg-muted-foreground/30'
+                  }`}
+                />
+              ))}
+            </div>
           </div>
         </div>
 
