@@ -5,17 +5,33 @@ const Services = () => {
     {
       icon: "🦷",
       title: "General Dentistry",
-      description: "Comprehensive dental care for all ages"
+      description: "Comprehensive dental care for all ages",
+      items: [
+        "Dental check-ups & X-rays",
+        "Teeth cleaning (prophylaxis)",
+        "Kids' care (pediatric dentistry)"
+      ]
     },
     {
       icon: "✨",
       title: "Cosmetic Dentistry", 
-      description: "Beautiful smiles with advanced aesthetics"
+      description: "Beautiful smiles with advanced aesthetics",
+      items: [
+        "Braces, aligners & Invisalign (orthodontics)",
+        "Teeth whitening"
+      ]
     },
     {
       icon: "🔧",
       title: "Restorative Care",
-      description: "Repair and restore damaged teeth"
+      description: "Repair and restore damaged teeth",
+      items: [
+        "Root canal treatment",
+        "Crowns & bridges", 
+        "Surgical extractions",
+        "Dental implants",
+        "Gum surgeries (periodontal)"
+      ]
     }
   ];
 
@@ -49,7 +65,15 @@ const Services = () => {
                 {service.icon}
               </div>
               <h3 className="text-xl font-bold text-secondary mb-2">{service.title}</h3>
-              <p className="text-muted-foreground">{service.description}</p>
+              <p className="text-muted-foreground mb-4">{service.description}</p>
+              <ul className="text-left space-y-2">
+                {service.items.map((item, itemIndex) => (
+                  <li key={itemIndex} className="text-sm text-muted-foreground flex items-start">
+                    <span className="text-secondary mr-2">•</span>
+                    {item}
+                  </li>
+                ))}
+              </ul>
             </div>
           ))}
         </div>
