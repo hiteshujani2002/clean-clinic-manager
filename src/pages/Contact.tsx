@@ -88,6 +88,9 @@ const Contact = () => {
               </CardHeader>
               <CardContent>
                 <form action="https://formspree.io/f/mandgpyv" method="POST" className="space-y-4">
+                  {/* Hidden field for better email identification */}
+                  <input type="hidden" name="_subject" value="New contact form submission from dental website" />
+                  
                   <div className="grid grid-cols-2 gap-4">
                     <Input 
                       name="firstName"
