@@ -5,22 +5,34 @@ import { Star } from 'lucide-react';
 const Testimonials = () => {
   const testimonials = [
     {
-      name: "Jeremy Curry",
+      name: "Rati Kanade",
       avatar: "/api/placeholder/60/60",
       rating: 5.0,
-      text: "I've always been anxious about visiting the dentist, but when I walked into SmileCare, I felt at ease. The staff was incredibly welcoming, and Dr. Wilson took the time to explain everything in detail. The treatment was completely painless, and the results exceeded my expectations.",
+      text: "Dr. Jyoti performed my re-root canal treatment, and I couldn't be more grateful. I had previously undergone a root canal with another dentist but continued to experience severe pain. Dr. Jyoti not only saved my tooth but also did an excellent job with the procedure. I am now completely pain-free and able to eat comfortably. Highly recommended!",
     },
     {
-      name: "Helena Erickson",
+      name: "Hira Panhalkar",
       avatar: "/api/placeholder/60/60", 
-      rating: 4.8,
-      text: "I had been putting off my dental check-up for years due to bad past experiences. A friend recommended SmileCare, and I'm so glad they did! Dr. Chen was kind, patient, and extremely thorough. I needed a filling, and it was done perfectly without any discomfort.",
+      rating: 5.0,
+      text: "Recently I got my root canal treatment done, the team is excellent in work. It was painless and quick. The assistant is also very cooperative with the appointments as it was very difficult for me to take out time with my office. Thanks team! Best dental clinic I found on google.",
     },
     {
-      name: "Sarah Mitchell", 
+      name: "Karina Vishwakarma", 
       avatar: "/api/placeholder/60/60",
       rating: 5.0,
-      text: "After years of being self-conscious about my smile, I finally decided to look into cosmetic dentistry. The team at SmileCare walked me through all my options and helped me choose the best treatment. They delivered exactly what they promised, and now I smile with confidence!",
+      text: "I have done my root canal treatment with Dr Jyoti recently. I must say I had very good experience, it was painless and very reasonable price. Dr Jyoti is very experienced and her staff are very well trained. Thanks team! Dr Jyoti dental care is the best dental clinic in Andheri East.",
+    },
+    {
+      name: "Apurva Bhoir",
+      avatar: "/api/placeholder/60/60",
+      rating: 5.0,
+      text: "Saw the Google reviews and visited the clinic, team is really experienced and on top of the toe to hear your request. Did my filling and root canal treatment. Highly recommend in Andheri area.",
+    },
+    {
+      name: "Abhishek Pandey",
+      avatar: "/api/placeholder/60/60",
+      rating: 5.0,
+      text: "Dr. Jyoti's clinic is best for all dental procedures I had a very good experience in terms of understanding the root cause of my dental problem and the procedure to get it cured. I would highly recommend and wish well to Dr. Jyoti and her team for doing excellent job.",
     }
   ];
 
