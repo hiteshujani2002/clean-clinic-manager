@@ -97,7 +97,7 @@ const Testimonials = () => {
                   <h4 className="text-xl font-semibold text-secondary">{testimonials[currentIndex].name}</h4>
                   <div className="flex items-center space-x-1 mt-1">
                     {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-4 h-4 fill-trust text-trust" />
+                      <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
                     ))}
                     <span className="text-sm text-muted-foreground ml-2">{testimonials[currentIndex].rating}</span>
                   </div>
