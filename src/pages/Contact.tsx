@@ -87,16 +87,38 @@ const Contact = () => {
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <form className="space-y-4">
+                <form action="https://formspree.io/f/mandgpyv" method="POST" className="space-y-4">
                   <div className="grid grid-cols-2 gap-4">
-                    <Input placeholder="First Name" />
-                    <Input placeholder="Last Name" />
+                    <Input 
+                      name="firstName"
+                      placeholder="First Name" 
+                      required 
+                    />
+                    <Input 
+                      name="lastName"
+                      placeholder="Last Name" 
+                      required 
+                    />
                   </div>
-                  <Input placeholder="Email" type="email" />
-                  <Input placeholder="Phone" type="tel" />
-                  <Input placeholder="Subject" />
-                  <Textarea placeholder="Message" className="min-h-32" />
-                  <Button className="w-full bg-gradient-to-r from-primary to-secondary">
+                  <Input 
+                    name="email"
+                    placeholder="Email Address" 
+                    type="email" 
+                    required 
+                  />
+                  <Input 
+                    name="phone"
+                    placeholder="Phone Number" 
+                    type="tel" 
+                    required 
+                  />
+                  <Textarea 
+                    name="message"
+                    placeholder="Message" 
+                    className="min-h-32" 
+                    required 
+                  />
+                  <Button type="submit" className="w-full bg-gradient-to-r from-primary to-secondary">
                     Send Message
                   </Button>
                 </form>
