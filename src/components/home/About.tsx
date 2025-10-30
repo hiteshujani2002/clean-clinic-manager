@@ -1,6 +1,7 @@
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import drNagrajImage from '@/assets/dr-nagraj.jpg';
+import drRunalImage from '@/assets/dr-runal.jpg';
 
 const About = () => {
   const doctors = [
@@ -12,9 +13,9 @@ const About = () => {
       bio: "Dr. Nagraj is an alumnus of Nair Hospital Dental College with 3+ years of clinical experience and worked at Sion and KEM Hospitals. He currently practices as an Associate Dentist at Dr Jyoti's Dental Care. With a special interest in aesthetic and cosmetic dentistry, he focuses on smile design and minimally invasive treatments. Dr. Nagraj is committed to delivering ethical, patient-centered care with precision and compassion."
     },
     {
-      name: "Dr. Michael Chen",
+      name: "Dr. Runal",
       specialty: "Dentist", 
-      image: "/api/placeholder/300/300",
+      image: drRunalImage,
       experience: "20+ years"
     }
   ];
