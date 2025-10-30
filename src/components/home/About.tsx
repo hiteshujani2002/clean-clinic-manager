@@ -8,7 +8,8 @@ const About = () => {
       name: "Dr. Nagraj",
       specialty: "Dentist",
       image: drNagrajImage,
-      experience: "15+ years"
+      experience: "3+ years",
+      bio: "Dr. Nagraj is an alumnus of Nair Hospital Dental College with 3+ years of clinical experience and worked at Sion and KEM Hospitals. He currently practices as an Associate Dentist at Dr Jyoti's Dental Care. With a special interest in aesthetic and cosmetic dentistry, he focuses on smile design and minimally invasive treatments. Dr. Nagraj is committed to delivering ethical, patient-centered care with precision and compassion."
     },
     {
       name: "Dr. Michael Chen",
@@ -53,10 +54,17 @@ const About = () => {
                   className="w-full h-full object-cover"
                 />
               </div>
-              <div className="p-6 text-center">
-                <h3 className="text-xl font-bold text-secondary mb-1">{doctor.name}</h3>
-                <p className="text-muted-foreground text-sm mb-2">{doctor.specialty}</p>
-                <p className="text-xs text-muted-foreground">{doctor.experience}</p>
+              <div className="p-6">
+                <div className="text-center mb-4">
+                  <h3 className="text-xl font-bold text-secondary mb-1">{doctor.name}</h3>
+                  <p className="text-muted-foreground text-sm mb-1">{doctor.specialty}</p>
+                  <p className="text-xs text-muted-foreground">{doctor.experience}</p>
+                </div>
+                {doctor.bio && (
+                  <p className="text-sm text-muted-foreground leading-relaxed text-left">
+                    {doctor.bio}
+                  </p>
+                )}
               </div>
             </div>
           ))}
