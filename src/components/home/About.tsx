@@ -61,7 +61,7 @@ const About = () => {
                   <p className="text-xs text-muted-foreground">{doctor.experience}</p>
                 </div>
                 {doctor.bio && (
-                  <p className="text-sm text-muted-foreground leading-relaxed text-left">
+                  <p className="text-base text-muted-foreground leading-relaxed text-left">
                     {doctor.bio}
                   </p>
                 )}
