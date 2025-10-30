@@ -16,7 +16,8 @@ const About = () => {
       name: "Dr. Runal",
       specialty: "Dentist", 
       image: drRunalImage,
-      experience: "20+ years"
+      experience: "3 years",
+      bio: "Dr. Runal is an alumnus of Nair Hospital Dental College with 3 years of clinical experience and worked at Sion and KEM Hospitals. He currently works as an Associate Dentist at Dr. Jyoti's Dental Care. His core interests lie in restorative dentistry and endodontics, focusing on functional and long-lasting dental solutions. He strives to combine clinical skill with patient comfort to ensure high-quality dental care."
     }
   ];
 
