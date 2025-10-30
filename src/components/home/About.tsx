@@ -1,12 +1,13 @@
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
+import drNagrajImage from '@/assets/dr-nagraj.jpg';
 
 const About = () => {
   const doctors = [
     {
-      name: "Dr. Sarah Wilson",
+      name: "Dr. Nagraj",
       specialty: "Dentist",
-      image: "/api/placeholder/300/300",
+      image: drNagrajImage,
       experience: "15+ years"
     },
     {
