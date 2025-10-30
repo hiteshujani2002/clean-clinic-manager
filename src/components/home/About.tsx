@@ -2,13 +2,6 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 
 const About = () => {
-  const categories = [
-    { name: "All Experts", active: true },
-    { name: "Dentists", active: false },
-    { name: "Surgeons", active: false },
-    { name: "Orthodontists", active: false }
-  ];
-
   const doctors = [
     {
       name: "Dr. Sarah Wilson",
@@ -18,15 +11,9 @@ const About = () => {
     },
     {
       name: "Dr. Michael Chen",
-      specialty: "Surgeon", 
+      specialty: "Dentist", 
       image: "/api/placeholder/300/300",
       experience: "20+ years"
-    },
-    {
-      name: "Dr. Emily Rodriguez",
-      specialty: "Orthodontist",
-      image: "/api/placeholder/300/300", 
-      experience: "12+ years"
     }
   ];
 
@@ -46,23 +33,16 @@ const About = () => {
 
         {/* Category Filter */}
         <div className="flex flex-wrap justify-center gap-2 mb-12">
-          {categories.map((category, index) => (
-            <Badge
-              key={index}
-              variant={category.active ? "default" : "outline"}
-              className={`px-6 py-2 rounded-full cursor-pointer transition-colors ${
-                category.active 
-                  ? "bg-primary text-secondary hover:bg-primary/90" 
-                  : "bg-transparent border-border text-muted-foreground hover:bg-primary/10"
-              }`}
-            >
-              {category.name}
-            </Badge>
-          ))}
+          <Badge
+            variant="default"
+            className="px-6 py-2 rounded-full bg-primary text-secondary"
+          >
+            Dentists
+          </Badge>
         </div>
 
         {/* Doctors Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           {doctors.map((doctor, index) => (
             <div key={index} className="bg-card rounded-3xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow">
               <div className="aspect-square">
