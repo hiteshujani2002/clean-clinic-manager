@@ -63,40 +63,35 @@ const Footer = () => {
             <div className="space-y-3 text-sm">
               <div className="flex items-center space-x-3">
                 <Phone className="w-4 h-4 text-primary" />
-                <span className="text-muted-foreground">(555) 123-4567</span>
+                <span className="text-muted-foreground">+91 9167544950</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="w-4 h-4 text-primary" />
-                <span className="text-muted-foreground">info@smilecare.com</span>
+                <span className="text-muted-foreground">drjyotisdentalcare@gmail.com</span>
               </div>
               <div className="flex items-start space-x-3">
                 <MapPin className="w-4 h-4 text-primary mt-0.5" />
                 <span className="text-muted-foreground">
-                  123 Dental Street<br />
-                  Health City, HC 12345
+                  New Pump House, Shop no.15, Jijamata chowk,<br />
+                  opposite Hanjar nagar society, Andheri East,<br />
+                  Mumbai, Maharashtra 400093
                 </span>
               </div>
               <div className="flex items-start space-x-3">
                 <Clock className="w-4 h-4 text-primary mt-0.5" />
                 <div className="text-muted-foreground">
-                  <div>Mon-Fri: 8:00 AM - 6:00 PM</div>
-                  <div>Sat: 9:00 AM - 3:00 PM</div>
-                  <div>Sun: Emergency Only</div>
+                  <div>Tuesday - Saturday: 10AM - 10PM</div>
+                  <div>Sunday: 11:30 AM - 3:30 PM</div>
+                  <div>Monday: Closed</div>
                 </div>
               </div>
-            </div>
-            
-            <div className="pt-4">
-              <Button className="w-full bg-gradient-to-r from-primary to-secondary">
-                Emergency: (555) 911-HELP
-              </Button>
             </div>
           </div>
         </div>
 
         <div className="border-t mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-sm text-muted-foreground">
-            © 2024 SmileCare Dental Clinic. All rights reserved.
+            © 2025 Dr.Jyoti's Dental Care. All rights reserved.
           </p>
           <div className="flex space-x-4 mt-4 md:mt-0">
             <Link to="/privacy" className="text-sm text-muted-foreground hover:text-primary">Privacy Policy</Link>
