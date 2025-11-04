@@ -45,7 +45,7 @@ const Inquiries = () => {
   };
 
   return (
-    <section className="py-16 lg:py-24 bg-muted/30">
+    <section className="py-8 lg:py-12 bg-muted/30">
       <div className="container mx-auto px-4">
         <div className="text-center space-y-4 mb-16">
           <div className="inline-block">

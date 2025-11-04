@@ -22,7 +22,7 @@ const About = () => {
   ];
 
   return (
-    <section className="pt-8 pb-16 lg:pt-12 lg:pb-24 bg-muted/30">
+    <section className="pt-8 pb-8 lg:pt-12 lg:pb-12 bg-muted/30">
       <div className="container mx-auto px-4">
         <div className="text-center space-y-4 mb-16">
           <div className="inline-block">

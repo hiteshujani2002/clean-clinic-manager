@@ -51,7 +51,7 @@ const Hero = () => {
             </div>
 
             {/* Features */}
-            <div className="flex flex-col sm:flex-row lg:justify-center gap-4 pt-4 animate-fade-in max-w-2xl lg:mx-auto">
+            <div className="flex flex-col sm:flex-row justify-center gap-4 pt-4 animate-fade-in max-w-2xl lg:mx-auto">
               <div className="flex items-center space-x-3 transition-transform duration-300 hover:scale-105">
                 <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center">
                   <Shield className="w-5 h-5 text-primary" />
