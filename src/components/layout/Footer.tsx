@@ -14,8 +14,8 @@ const Footer = () => {
                 <Smile className="w-6 h-6 text-white" />
               </div>
               <div>
-                <h3 className="text-lg font-bold">SmileCare</h3>
-                <p className="text-sm text-muted-foreground">Dental Clinic</p>
+                <h3 className="text-lg font-bold">Dr.Jyoti's Dental Care</h3>
+                <p className="text-sm text-muted-foreground">Cosmetic and General Dentistry</p>
               </div>
             </div>
             <p className="text-sm text-muted-foreground">
@@ -39,12 +39,10 @@ const Footer = () => {
           <div className="space-y-4">
             <h4 className="text-lg font-semibold">Quick Links</h4>
             <ul className="space-y-2 text-sm">
-              <li><Link to="/services" className="text-muted-foreground hover:text-primary transition-colors">Our Services</Link></li>
-              <li><Link to="/doctors" className="text-muted-foreground hover:text-primary transition-colors">Meet Our Doctors</Link></li>
-              <li><Link to="/pricing" className="text-muted-foreground hover:text-primary transition-colors">Pricing</Link></li>
-              <li><Link to="/gallery" className="text-muted-foreground hover:text-primary transition-colors">Before & After</Link></li>
-              <li><Link to="/blog" className="text-muted-foreground hover:text-primary transition-colors">Blog & FAQs</Link></li>
-              <li><Link to="/contact" className="text-muted-foreground hover:text-primary transition-colors">Contact Us</Link></li>
+              <li><a href="#home" className="text-muted-foreground hover:text-primary transition-colors">Home</a></li>
+              <li><a href="#services" className="text-muted-foreground hover:text-primary transition-colors">Services</a></li>
+              <li><a href="#doctors" className="text-muted-foreground hover:text-primary transition-colors">Doctors</a></li>
+              <li><a href="#testimonials" className="text-muted-foreground hover:text-primary transition-colors">Testimonials</a></li>
             </ul>
           </div>
 
@@ -54,10 +52,8 @@ const Footer = () => {
             <ul className="space-y-2 text-sm">
               <li><span className="text-muted-foreground">General Dentistry</span></li>
               <li><span className="text-muted-foreground">Cosmetic Dentistry</span></li>
-              <li><span className="text-muted-foreground">Orthodontics</span></li>
+              <li><span className="text-muted-foreground">Restorative Care</span></li>
               <li><span className="text-muted-foreground">Dental Implants</span></li>
-              <li><span className="text-muted-foreground">Teeth Whitening</span></li>
-              <li><span className="text-muted-foreground">Emergency Care</span></li>
             </ul>
           </div>
 
