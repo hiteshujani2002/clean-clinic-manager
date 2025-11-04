@@ -95,8 +95,8 @@ const Footer = () => {
             © 2025 Dr.Jyoti's Dental Care. All rights reserved.
           </p>
           <div className="flex space-x-4 mt-4 md:mt-0">
-            <Link to="/privacy" className="text-sm text-muted-foreground hover:text-primary">Privacy Policy</Link>
-            <Link to="/terms" className="text-sm text-muted-foreground hover:text-primary">Terms of Service</Link>
+            <span className="text-sm text-muted-foreground">Privacy Policy</span>
+            <span className="text-sm text-muted-foreground">Terms of Service</span>
           </div>
         </div>
       </div>
