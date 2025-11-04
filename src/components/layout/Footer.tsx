@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Phone, Mail, MapPin, Clock, Facebook, Instagram, Twitter, Smile } from 'lucide-react';
+import { Phone, Mail, MapPin, Clock, Facebook, Instagram, Smile } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const Footer = () => {
@@ -23,14 +23,15 @@ const Footer = () => {
               Creating beautiful, healthy smiles for our community.
             </p>
             <div className="flex space-x-2">
-              <Button size="sm" variant="outline">
-                <Facebook className="w-4 h-4" />
+              <Button size="sm" variant="outline" asChild>
+                <a href="https://www.facebook.com/drjyotisdentalcare/" target="_blank" rel="noopener noreferrer">
+                  <Facebook className="w-4 h-4" />
+                </a>
               </Button>
-              <Button size="sm" variant="outline">
-                <Instagram className="w-4 h-4" />
-              </Button>
-              <Button size="sm" variant="outline">
-                <Twitter className="w-4 h-4" />
+              <Button size="sm" variant="outline" asChild>
+                <a href="https://www.instagram.com/drjyotisdentalcare.mumbai?igsh=MTg2c3c0NGdqcWdweQ==" target="_blank" rel="noopener noreferrer">
+                  <Instagram className="w-4 h-4" />
+                </a>
               </Button>
             </div>
           </div>
