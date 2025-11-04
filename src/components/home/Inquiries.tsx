@@ -101,11 +101,7 @@ const Inquiries = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold text-secondary mb-1">Phone</h3>
-                    <p className="text-muted-foreground">(555) 123-4567</p>
-                    <p className="text-sm text-muted-foreground">Emergency: (555) 911-HELP</p>
-                    <Button size="sm" className="mt-2 bg-secondary hover:bg-secondary/90 text-secondary-foreground rounded-lg">
-                      Emergency: (555) 911-HELP
-                    </Button>
+                    <p className="text-muted-foreground">9167544950</p>
                   </div>
                 </div>
               </CardContent>
@@ -119,7 +115,7 @@ const Inquiries = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold text-secondary mb-1">Email</h3>
-                    <p className="text-muted-foreground">info@smilecare.com</p>
+                    <p className="text-muted-foreground">drjyotisdentalcare@gmail.com</p>
                     <p className="text-sm text-muted-foreground">We'll respond within 24 hours</p>
                   </div>
                 </div>
@@ -134,8 +130,7 @@ const Inquiries = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold text-secondary mb-1">Location</h3>
-                    <p className="text-muted-foreground">123 Dental Street</p>
-                    <p className="text-muted-foreground">Health City, HC 12345</p>
+                    <p className="text-muted-foreground">New Pump House, Shop no.15, Jijamata chowk, opposite Hanjar nagar society, Andheri East, Mumbai, Maharashtra 400093</p>
                   </div>
                 </div>
               </CardContent>
