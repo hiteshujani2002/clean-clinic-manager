@@ -96,7 +96,7 @@ const Hero = () => {
       </div>
       
       {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-5">
+      <div className="absolute inset-0 opacity-5 pointer-events-none">
         <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-primary rounded-full animate-pulse" />
         <div className="absolute top-1/3 right-1/4 w-3 h-3 bg-secondary rounded-full animate-pulse" />
         <div className="absolute bottom-1/4 left-1/3 w-2 h-2 bg-trust rounded-full animate-pulse" />
