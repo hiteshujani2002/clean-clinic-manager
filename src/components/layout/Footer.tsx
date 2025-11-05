@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
-import { Phone, Mail, MapPin, Clock, Facebook, Instagram, Smile } from 'lucide-react';
+import { Phone, Mail, MapPin, Clock, Facebook, Instagram } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import logo from '@/assets/logo.jpg';
 
 const Footer = () => {
   return (
@@ -10,9 +11,7 @@ const Footer = () => {
           {/* Clinic Info */}
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
-              <div className="flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-br from-primary to-secondary">
-                <Smile className="w-6 h-6 text-white" />
-              </div>
+              <img src={logo} alt="Dr.Jyoti's Dental Care Logo" className="w-12 h-12 object-contain" />
               <div>
                 <h3 className="text-lg font-bold">Dr.Jyoti's Dental Care</h3>
                 <p className="text-sm text-muted-foreground">Cosmetic and General Dentistry</p>
