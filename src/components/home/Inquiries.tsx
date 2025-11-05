@@ -96,7 +96,7 @@ const Inquiries = () => {
             <Card className="border-0 shadow-sm rounded-2xl">
               <CardContent className="p-6">
                 <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center">
+                  <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
                     <Phone className="w-5 h-5 text-secondary" />
                   </div>
                   <div>
@@ -110,7 +110,7 @@ const Inquiries = () => {
             <Card className="border-0 shadow-sm rounded-2xl">
               <CardContent className="p-6">
                 <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center">
+                  <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
                     <Mail className="w-5 h-5 text-secondary" />
                   </div>
                   <div>
@@ -125,7 +125,7 @@ const Inquiries = () => {
             <Card className="border-0 shadow-sm rounded-2xl">
               <CardContent className="p-6">
                 <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center">
+                  <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
                     <MapPin className="w-5 h-5 text-secondary" />
                   </div>
                   <div>
@@ -139,7 +139,7 @@ const Inquiries = () => {
             <Card className="border-0 shadow-sm rounded-2xl">
               <CardContent className="p-6">
                 <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center">
+                  <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
                     <Clock className="w-5 h-5 text-secondary" />
                   </div>
                   <div>
