@@ -145,7 +145,7 @@ const Inquiries = () => {
                   <div>
                     <h3 className="font-semibold text-secondary mb-1">Hours</h3>
                     <div className="text-muted-foreground text-sm space-y-1">
-                      <div>Tuesday - Saturday: 10AM - 10PM</div>
+                      <div>Tuesday - Saturday: 10:00AM - 10:00PM</div>
                       <div>Sunday: 11:30 AM - 3:30 PM</div>
                       <div>Monday: Closed</div>
                     </div>

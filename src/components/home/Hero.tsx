@@ -29,7 +29,7 @@ const Hero = () => {
                 <div className="space-y-1 text-sm text-foreground">
                   <div className="flex justify-between">
                     <span>Tuesday - Saturday</span>
-                    <span className="font-medium">10AM - 10PM</span>
+                    <span className="font-medium">10:00AM - 10:00PM</span>
                   </div>
                   <div className="flex justify-between">
                     <span>Sunday</span>
