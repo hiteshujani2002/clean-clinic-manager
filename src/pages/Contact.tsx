@@ -90,7 +90,7 @@ const Contact = () => {
                   <div className="space-y-4">
                     <div>
                       <p className="font-semibold">Address</p>
-                      <p>123 Dental Street<br />Health City, HC 12345</p>
+                      <p>Shop no 17, ground floor, HILTON TOWER,<br />Jijamata Rd, Sher E Punjab, Sher E Punjab Colony,<br />Andheri East, Mumbai, Maharashtra 400093</p>
                     </div>
                     <div>
                       <p className="font-semibold">Office Hours</p>

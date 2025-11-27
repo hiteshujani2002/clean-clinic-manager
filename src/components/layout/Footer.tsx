@@ -72,9 +72,9 @@ const Footer = () => {
               <div className="flex items-start space-x-3">
                 <MapPin className="w-4 h-4 text-primary mt-0.5" />
                 <span className="text-muted-foreground">
-                  New Pump House, Shop no.15, Jijamata chowk,<br />
-                  opposite Hanjar nagar society, Andheri East,<br />
-                  Mumbai, Maharashtra 400093
+                  Shop no 17, ground floor, HILTON TOWER,<br />
+                  Jijamata Rd, Sher E Punjab, Sher E Punjab Colony,<br />
+                  Andheri East, Mumbai, Maharashtra 400093
                 </span>
               </div>
               <div className="flex items-start space-x-3">
