@@ -1,10 +1,18 @@
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
+import drJyotiImage from '@/assets/dr-jyoti.jpg';
 import drNagrajImage from '@/assets/dr-nagraj.jpg';
 import drRunalImage from '@/assets/dr-runal.jpg';
 
 const About = () => {
   const doctors = [
+    {
+      name: "Dr. Jyoti",
+      specialty: "Founder & Chief Dentist",
+      image: drJyotiImage,
+      experience: "10+ years",
+      bio: "Known for her gentle approach and meticulous attention to detail, Dr. Jyoti believes dentistry is about people, confidence, and overall wellbeing.\n\nShe has trained extensively in advanced procedures including cosmetic dentistry, implants, aligners, and restorative care, ensuring you receive modern and evidence-based treatment. Dr. Jyoti is also a proud member of the Indian Dental Association (IDA), reflecting her commitment to professional excellence.\n\nHer philosophy is simple yet profound: comfortable dentistry, honesty in treatment, and results that last. She is dedicated to making every patient feel heard, comfortable, and confident about their healthy smile."
+    },
     {
       name: "Dr. Nagraj",
       specialty: "Dentist",
