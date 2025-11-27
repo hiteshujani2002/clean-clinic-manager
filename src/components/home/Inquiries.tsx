@@ -130,7 +130,7 @@ const Inquiries = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold text-secondary mb-1">Location</h3>
-                    <p className="text-muted-foreground">New Pump House, Shop no.15, Jijamata chowk, opposite Hanjar nagar society, Andheri East, Mumbai, Maharashtra 400093</p>
+                    <p className="text-muted-foreground">Shop no 17, ground floor, HILTON TOWER, Jijamata Rd, Sher E Punjab, Sher E Punjab Colony, Andheri East, Mumbai, Maharashtra 400093</p>
                   </div>
                 </div>
               </CardContent>
