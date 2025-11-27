@@ -54,14 +54,14 @@ const About = () => {
         </div>
 
         {/* Doctors Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
           {doctors.map((doctor, index) => (
             <div key={index} className="bg-card rounded-3xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow">
-              <div className="aspect-square">
+              <div className="aspect-square bg-muted/50">
                 <img 
                   src={doctor.image} 
                   alt={doctor.name}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover object-top"
                 />
               </div>
               <div className="p-6">
