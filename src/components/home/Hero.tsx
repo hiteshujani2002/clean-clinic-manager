@@ -50,36 +50,7 @@ const Hero = () => {
               </div>
             </div>
 
-            {/* Features */}
-            <div className="flex flex-col sm:flex-row justify-center gap-4 pt-4 animate-fade-in max-w-2xl lg:mx-auto">
-              <div className="flex items-center space-x-3 transition-transform duration-300 hover:scale-105">
-                <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center">
-                  <Shield className="w-5 h-5 text-primary" />
-                </div>
-                <div>
-                  <h4 className="font-semibold text-sm">Safe & Sterile</h4>
-                  <p className="text-xs text-muted-foreground">Latest safety protocols</p>
-                </div>
-              </div>
-              <div className="flex items-center space-x-3 transition-transform duration-300 hover:scale-105">
-                <div className="w-10 h-10 bg-secondary/10 rounded-full flex items-center justify-center">
-                  <Heart className="w-5 h-5 text-secondary" />
-                </div>
-                <div>
-                  <h4 className="font-semibold text-sm">Gentle Care</h4>
-                  <p className="text-xs text-muted-foreground">Pain-free treatments</p>
-                </div>
-              </div>
-              <div className="flex items-center space-x-3 transition-transform duration-300 hover:scale-105">
-                <div className="w-10 h-10 bg-trust/10 rounded-full flex items-center justify-center">
-                  <Star className="w-5 h-5 text-trust" />
-                </div>
-                <div>
-                  <h4 className="font-semibold text-sm">Expert Team</h4>
-                  <p className="text-xs text-muted-foreground">9 years experience</p>
-                </div>
-              </div>
-            </div>
+
           </div>
 
           {/* Hero Image */}
@@ -101,6 +72,37 @@ const Hero = () => {
         <div className="absolute top-1/3 right-1/4 w-3 h-3 bg-secondary rounded-full animate-pulse" />
         <div className="absolute bottom-1/4 left-1/3 w-2 h-2 bg-trust rounded-full animate-pulse" />
       </div>
+
+        {/* Features */}
+        <div className="flex flex-col sm:flex-row justify-center text-center-div gap-4 pt-4 animate-fade-in max-w-2xl lg:mx-auto">
+          <div className="flex items-center space-x-3 transition-transform duration-300 hover:scale-105">
+            <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center">
+              <Shield className="w-5 h-5 text-primary" />
+            </div>
+            <div>
+              <h4 className="font-semibold text-sm">Safe & Sterile</h4>
+              <p className="text-xs text-muted-foreground">Latest safety protocols</p>
+            </div>
+          </div>
+          <div className="flex items-center space-x-3 transition-transform duration-300 hover:scale-105">
+            <div className="w-10 h-10 bg-secondary/10 rounded-full flex items-center justify-center">
+              <Heart className="w-5 h-5 text-secondary" />
+            </div>
+            <div>
+              <h4 className="font-semibold text-sm">Gentle Care</h4>
+              <p className="text-xs text-muted-foreground">Pain-free treatments</p>
+            </div>
+          </div>
+          <div className="flex items-center space-x-3 transition-transform duration-300 hover:scale-105">
+            <div className="w-10 h-10 bg-trust/10 rounded-full flex items-center justify-center">
+              <Star className="w-5 h-5 text-trust" />
+            </div>
+            <div>
+              <h4 className="font-semibold text-sm">Expert Team</h4>
+              <p className="text-xs text-muted-foreground">9 years experience</p>
+            </div>
+          </div>
+        </div>
     </section>
   );
 };
