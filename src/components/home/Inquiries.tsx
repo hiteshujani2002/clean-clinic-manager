@@ -2,7 +2,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Phone, Mail, MapPin, Clock } from 'lucide-react';
+import { Phone, Mail, Clock, MapPin, ExternalLink } from 'lucide-react';
 import { useState } from 'react';
 import { useToast } from '@/hooks/use-toast';
 
@@ -43,6 +43,19 @@ const Inquiries = () => {
       setIsSubmitting(false);
     }
   };
+
+  const locations = [
+    {
+      name: "Hilton Tower Clinic",
+      address: "Shop no 17, HILTON TOWER, Jijamata Rd, Sher E Punjab, Andheri East, Mumbai 400093",
+      directionsUrl: "https://www.google.com/maps/dir/?api=1&destination=Shop+no+17+HILTON+TOWER+Jijamata+Rd+Sher+E+Punjab+Andheri+East+Mumbai+400093"
+    },
+    {
+      name: "Pump House Clinic",
+      address: "Shop no.15, New Pump House, Jijamata chowk, opposite Hanjar nagar society, Andheri East, Mumbai 400093",
+      directionsUrl: "https://www.google.com/maps/dir/?api=1&destination=Shop+no+15+New+Pump+House+Jijamata+chowk+opposite+Hanjar+nagar+society+Andheri+East+Mumbai+400093"
+    }
+  ];
 
   return (
     <section className="py-8 lg:py-12 bg-muted/30">
@@ -126,20 +139,6 @@ const Inquiries = () => {
               <CardContent className="p-6">
                 <div className="flex items-start space-x-4">
                   <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
-                    <MapPin className="w-5 h-5 text-secondary" />
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-secondary mb-1">Location</h3>
-                    <p className="text-muted-foreground">Shop no 17, ground floor, HILTON TOWER, Jijamata Rd, Sher E Punjab, Sher E Punjab Colony, Andheri East, Mumbai, Maharashtra 400093</p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card className="border-0 shadow-sm rounded-2xl">
-              <CardContent className="p-6">
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
                     <Clock className="w-5 h-5 text-secondary" />
                   </div>
                   <div>
@@ -154,6 +153,64 @@ const Inquiries = () => {
               </CardContent>
             </Card>
           </div>
+        </div>
+
+        {/* Map Section */}
+        <div className="mt-16 max-w-6xl mx-auto">
+          <Card className="border-0 shadow-lg rounded-2xl overflow-hidden">
+            <CardHeader>
+              <CardTitle className="text-xl font-bold text-secondary flex items-center gap-2">
+                <MapPin className="w-5 h-5 text-primary" />
+                Our Locations
+              </CardTitle>
+            </CardHeader>
+            <CardContent className="p-0">
+              {/* Google Maps Embed */}
+              <div className="w-full h-[400px] relative">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3769.8!2d72.85!3d19.11!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTnCsDA2JzM2LjAiTiA3MsKwNTEnMDAuMCJF!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin&q=Hilton+Tower+Jijamata+Rd+Sher+E+Punjab+Andheri+East+Mumbai"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="Dr. Jyoti's Dental Care Locations"
+                  className="absolute inset-0"
+                />
+              </div>
+              
+              {/* Location Cards with Get Directions */}
+              <div className="p-6 grid grid-cols-1 md:grid-cols-2 gap-4">
+                {locations.map((location, index) => (
+                  <div 
+                    key={index} 
+                    className="bg-muted/50 rounded-xl p-4 flex flex-col justify-between"
+                  >
+                    <div>
+                      <h4 className="font-semibold text-secondary mb-2">{location.name}</h4>
+                      <p className="text-sm text-muted-foreground mb-4">{location.address}</p>
+                    </div>
+                    <Button 
+                      variant="outline" 
+                      className="w-full rounded-xl border-secondary text-secondary hover:bg-secondary hover:text-white"
+                      asChild
+                    >
+                      <a 
+                        href={location.directionsUrl} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="flex items-center justify-center gap-2"
+                      >
+                        <ExternalLink className="w-4 h-4" />
+                        Get Directions
+                      </a>
+                    </Button>
+                  </div>
+                ))}
+              </div>
+            </CardContent>
+          </Card>
         </div>
       </div>
     </section>
