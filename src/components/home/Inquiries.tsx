@@ -165,49 +165,51 @@ const Inquiries = () => {
               </CardTitle>
             </CardHeader>
             <CardContent className="p-0">
-              {/* Google Maps Embed */}
-              <div className="w-full h-[400px] relative">
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3769.8!2d72.85!3d19.11!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTnCsDA2JzM2LjAiTiA3MsKwNTEnMDAuMCJF!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin&q=Hilton+Tower+Jijamata+Rd+Sher+E+Punjab+Andheri+East+Mumbai"
-                  width="100%"
-                  height="100%"
-                  style={{ border: 0 }}
-                  allowFullScreen
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                  title="Dr. Jyoti's Dental Care Locations"
-                  className="absolute inset-0"
-                />
-              </div>
-              
-              {/* Location Cards with Get Directions */}
-              <div className="p-6 grid grid-cols-1 md:grid-cols-2 gap-4">
-                {locations.map((location, index) => (
-                  <div 
-                    key={index} 
-                    className="bg-muted/50 rounded-xl p-4 flex flex-col justify-between"
-                  >
-                    <div>
-                      <h4 className="font-semibold text-secondary mb-2">{location.name}</h4>
-                      <p className="text-sm text-muted-foreground mb-4">{location.address}</p>
-                    </div>
-                    <Button 
-                      variant="outline" 
-                      className="w-full rounded-xl border-secondary text-secondary hover:bg-secondary hover:text-white"
-                      asChild
+              <div className="flex flex-col lg:flex-row">
+                {/* Google Maps Embed - Left Side */}
+                <div className="w-full lg:w-[45%] h-[300px] lg:h-[400px] relative flex-shrink-0">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3769.8!2d72.85!3d19.11!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTnCsDA2JzM2LjAiTiA3MsKwNTEnMDAuMCJF!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin&q=Hilton+Tower+Jijamata+Rd+Sher+E+Punjab+Andheri+East+Mumbai"
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0 }}
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    title="Dr. Jyoti's Dental Care Locations"
+                    className="absolute inset-0"
+                  />
+                </div>
+                
+                {/* Location Cards - Right Side */}
+                <div className="w-full lg:w-[55%] p-6 flex flex-col justify-center gap-4">
+                  {locations.map((location, index) => (
+                    <div 
+                      key={index} 
+                      className="bg-muted/50 rounded-xl p-4 flex flex-col justify-between"
                     >
-                      <a 
-                        href={location.directionsUrl} 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="flex items-center justify-center gap-2"
+                      <div>
+                        <h4 className="font-semibold text-secondary mb-2">{location.name}</h4>
+                        <p className="text-sm text-muted-foreground mb-4">{location.address}</p>
+                      </div>
+                      <Button 
+                        variant="outline" 
+                        className="w-full rounded-xl border-secondary text-secondary hover:bg-secondary hover:text-white"
+                        asChild
                       >
-                        <ExternalLink className="w-4 h-4" />
-                        Get Directions
-                      </a>
-                    </Button>
-                  </div>
-                ))}
+                        <a 
+                          href={location.directionsUrl} 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="flex items-center justify-center gap-2"
+                        >
+                          <ExternalLink className="w-4 h-4" />
+                          Get Directions
+                        </a>
+                      </Button>
+                    </div>
+                  ))}
+                </div>
               </div>
             </CardContent>
           </Card>
