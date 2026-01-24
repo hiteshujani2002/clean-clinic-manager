@@ -156,20 +156,20 @@ const Inquiries = () => {
         </div>
 
         {/* Map Section */}
-        <div className="mt-16 max-w-6xl mx-auto">
+        <div className="mt-16 max-w-5xl mx-auto">
+          <div className="text-center mb-6">
+            <h3 className="text-xl font-bold text-secondary flex items-center justify-center gap-2">
+              <MapPin className="w-5 h-5 text-primary" />
+              Our Locations
+            </h3>
+          </div>
           <Card className="border-0 shadow-lg rounded-2xl overflow-hidden">
-            <CardHeader>
-              <CardTitle className="text-xl font-bold text-secondary flex items-center gap-2">
-                <MapPin className="w-5 h-5 text-primary" />
-                Our Locations
-              </CardTitle>
-            </CardHeader>
             <CardContent className="p-0">
-              <div className="flex flex-col lg:flex-row">
+              <div className="flex flex-col lg:flex-row min-h-[320px]">
                 {/* Google Maps Embed - Left Side */}
-                <div className="w-full lg:w-[45%] h-[300px] lg:h-[400px] relative flex-shrink-0">
+                <div className="w-full lg:w-1/2 h-[280px] lg:h-auto relative">
                   <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3769.8!2d72.85!3d19.11!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTnCsDA2JzM2LjAiTiA3MsKwNTEnMDAuMCJF!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin&q=Hilton+Tower+Jijamata+Rd+Sher+E+Punjab+Andheri+East+Mumbai"
+                    src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d3770.0!2d72.856!3d19.108!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sHilton+Tower+Pump+House+Jijamata+Road+Andheri+East+Mumbai!5e0!3m2!1sen!2sin!4v1700000000000"
                     width="100%"
                     height="100%"
                     style={{ border: 0 }}
@@ -182,26 +182,34 @@ const Inquiries = () => {
                 </div>
                 
                 {/* Location Cards - Right Side */}
-                <div className="w-full lg:w-[55%] p-6 flex flex-col justify-center gap-4">
+                <div className="w-full lg:w-1/2 flex flex-col">
                   {locations.map((location, index) => (
                     <div 
                       key={index} 
-                      className="bg-muted/50 rounded-xl p-4 flex flex-col justify-between"
+                      className={`flex-1 p-6 flex flex-col justify-center ${
+                        index === 0 ? 'border-b lg:border-b border-border/50' : ''
+                      }`}
                     >
-                      <div>
-                        <h4 className="font-semibold text-secondary mb-2">{location.name}</h4>
-                        <p className="text-sm text-muted-foreground mb-4">{location.address}</p>
+                      <div className="flex items-start gap-3 mb-4">
+                        <div className="w-10 h-10 bg-primary/20 rounded-full flex items-center justify-center flex-shrink-0">
+                          <MapPin className="w-5 h-5 text-secondary" />
+                        </div>
+                        <div className="flex-1">
+                          <h4 className="font-semibold text-secondary mb-1">{location.name}</h4>
+                          <p className="text-sm text-muted-foreground leading-relaxed">{location.address}</p>
+                        </div>
                       </div>
                       <Button 
                         variant="outline" 
-                        className="w-full rounded-xl border-secondary text-secondary hover:bg-secondary hover:text-white"
+                        size="sm"
+                        className="w-fit rounded-xl border-secondary text-secondary hover:bg-secondary hover:text-white"
                         asChild
                       >
                         <a 
                           href={location.directionsUrl} 
                           target="_blank" 
                           rel="noopener noreferrer"
-                          className="flex items-center justify-center gap-2"
+                          className="flex items-center gap-2"
                         >
                           <ExternalLink className="w-4 h-4" />
                           Get Directions
