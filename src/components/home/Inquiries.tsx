@@ -159,7 +159,7 @@ const Inquiries = () => {
         <div className="mt-16 max-w-5xl mx-auto">
           <div className="text-center mb-6">
             <h3 className="text-xl font-bold text-secondary flex items-center justify-center gap-2">
-              <MapPin className="w-5 h-5 text-primary" />
+              <MapPin className="w-5 h-5 text-secondary" />
               Our Locations
             </h3>
           </div>
