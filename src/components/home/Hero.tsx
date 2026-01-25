@@ -11,14 +11,14 @@ const Hero = () => {
             <div className="space-y-4 lg:space-y-6">
               <div className="inline-block">
                 <span className="text-sm font-medium text-muted-foreground tracking-wider uppercase">
-                  Advanced Dental Care
+                  Trusted Dentist in Sher-E-Punjab, Andheri East, Mumbai
                 </span>
               </div>
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-primary leading-tight">
-                Your Perfect Smile Starts with <span className="text-secondary">Dr.Jyoti's Dental Care</span>
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-secondary leading-tight">
+                Dr. Jyoti's Dental Care
               </h1>
               <p className="text-base sm:text-lg text-muted-foreground max-w-lg">
-                Your smile is not your job, it's our ART!
+                If you are searching for a dentist near you in Andheri East, we offer ethical, gentle, and advanced dental treatment for all age groups.
               </p>
             </div>
 
