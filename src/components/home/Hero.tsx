@@ -5,7 +5,18 @@ const Hero = () => {
   return (
     <section className="relative overflow-hidden bg-background">
       <div className="container mx-auto px-4 py-8 sm:py-12 lg:py-16">
-        <div className="grid lg:grid-cols-2 gap-6 lg:gap-8 items-start">
+        <div className="grid lg:grid-cols-2 gap-6 lg:gap-12 items-center">
+          {/* Hero Image */}
+          <div className="relative order-last lg:order-first">
+            <div className="relative z-10 rounded-3xl overflow-hidden animate-scale-in">
+              <img 
+                src="/lovable-uploads/ddb0b256-4a24-4d6e-ab23-2e2fa4f69452.png" 
+                alt="Modern dental office with professional equipment"
+                className="w-full h-[300px] sm:h-[400px] lg:h-[500px] object-cover"
+              />
+            </div>
+          </div>
+
           {/* Content */}
           <div className="space-y-6 lg:space-y-8 animate-slide-up">
             <div className="space-y-4 lg:space-y-6">
@@ -17,13 +28,13 @@ const Hero = () => {
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-secondary leading-tight">
                 Dr. Jyoti's Dental Care
               </h1>
-              <p className="text-base sm:text-lg text-muted-foreground max-w-lg">
+              <p className="text-base sm:text-lg text-muted-foreground max-w-xl">
                 If you are searching for a dentist near you in Andheri East, we offer ethical, gentle, and advanced dental treatment for all age groups.
               </p>
             </div>
 
             {/* Working Hours Card */}
-            <div className="bg-primary/10 border border-primary/20 rounded-2xl p-4 sm:p-6 max-w-xs animate-scale-in">
+            <div className="bg-primary/10 border border-primary/20 rounded-2xl p-4 sm:p-6 max-w-sm animate-scale-in">
               <div className="space-y-3">
                 <h3 className="font-semibold text-secondary">Working Hours</h3>
                 <div className="space-y-1 text-sm text-foreground">
@@ -49,19 +60,6 @@ const Hero = () => {
                 </div>
               </div>
             </div>
-
-
-          </div>
-
-          {/* Hero Image */}
-          <div className="relative lg:order-first">
-            <div className="relative z-10 rounded-3xl overflow-hidden animate-scale-in">
-              <img 
-                src="/lovable-uploads/ddb0b256-4a24-4d6e-ab23-2e2fa4f69452.png" 
-                alt="Modern dental office with professional equipment"
-                className="w-full h-[300px] sm:h-[400px] lg:h-[500px] object-cover"
-              />
-            </div>
           </div>
         </div>
       </div>
@@ -73,8 +71,9 @@ const Hero = () => {
         <div className="absolute bottom-1/4 left-1/3 w-2 h-2 bg-trust rounded-full animate-pulse" />
       </div>
 
-        {/* Features */}
-        <div className="flex flex-col sm:flex-row justify-center text-center-div gap-4 pt-4 animate-fade-in max-w-2xl lg:mx-auto">
+      {/* Features */}
+      <div className="container mx-auto px-4 pb-8">
+        <div className="flex flex-col sm:flex-row justify-center gap-6 sm:gap-8 pt-4 animate-fade-in">
           <div className="flex items-center space-x-3 transition-transform duration-300 hover:scale-105">
             <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center">
               <Shield className="w-5 h-5 text-primary" />
@@ -103,6 +102,7 @@ const Hero = () => {
             </div>
           </div>
         </div>
+      </div>
     </section>
   );
 };
