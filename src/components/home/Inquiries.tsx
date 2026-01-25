@@ -3,8 +3,10 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Phone, Mail, Clock, MapPin, ExternalLink } from 'lucide-react';
-import { useState } from 'react';
+import { useState, lazy, Suspense } from 'react';
 import { useToast } from '@/hooks/use-toast';
+
+const LocationMap = lazy(() => import('./LocationMap'));
 
 const Inquiries = () => {
   const { toast } = useToast();
@@ -167,18 +169,10 @@ const Inquiries = () => {
             <CardContent className="p-0">
               <div className="flex flex-col lg:flex-row min-h-[320px]">
                 {/* Google Maps Embed - Left Side */}
-                <div className="w-full lg:w-1/2 h-[280px] lg:h-auto relative">
-                  <iframe
-                    src="https://maps.google.com/maps?q=Jijamata+Road,+Sher+E+Punjab,+Andheri+East,+Mumbai+400093&t=m&z=17&ie=UTF8&iwloc=B&output=embed"
-                    width="100%"
-                    height="100%"
-                    style={{ border: 0 }}
-                    allowFullScreen
-                    loading="lazy"
-                    referrerPolicy="no-referrer-when-downgrade"
-                    title="Dr. Jyoti's Dental Care Locations - Hilton Tower & Pump House Clinics"
-                    className="absolute inset-0"
-                  />
+                <div className="w-full lg:w-1/2 h-[280px] lg:h-auto relative overflow-hidden rounded-t-2xl lg:rounded-t-none lg:rounded-l-2xl">
+                  <Suspense fallback={<div className="w-full h-full min-h-[280px] bg-muted animate-pulse" />}>
+                    <LocationMap />
+                  </Suspense>
                 </div>
                 
                 {/* Location Cards - Right Side */}
