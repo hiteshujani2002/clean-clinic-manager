@@ -1,4 +1,4 @@
-import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
+import { useEffect, useRef } from 'react';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 
@@ -12,8 +12,6 @@ const defaultIcon = L.icon({
   popupAnchor: [1, -34],
   shadowSize: [41, 41],
 });
-
-L.Marker.prototype.options.icon = defaultIcon;
 
 interface Location {
   name: string;
@@ -39,29 +37,52 @@ const centerLat = (locations[0].coordinates[0] + locations[1].coordinates[0]) / 
 const centerLng = (locations[0].coordinates[1] + locations[1].coordinates[1]) / 2;
 
 const LocationMap = () => {
+  const mapRef = useRef<HTMLDivElement>(null);
+  const mapInstanceRef = useRef<L.Map | null>(null);
+
+  useEffect(() => {
+    if (!mapRef.current || mapInstanceRef.current) return;
+
+    // Initialize the map
+    const map = L.map(mapRef.current, {
+      center: [centerLat, centerLng],
+      zoom: 17,
+      scrollWheelZoom: false,
+    });
+
+    mapInstanceRef.current = map;
+
+    // Add tile layer
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+    }).addTo(map);
+
+    // Add markers for each location
+    locations.forEach((location) => {
+      const marker = L.marker(location.coordinates, { icon: defaultIcon }).addTo(map);
+      marker.bindPopup(`
+        <div style="min-width: 180px;">
+          <strong style="color: #1e3a5f; font-size: 14px;">${location.name}</strong>
+          <p style="color: #666; font-size: 12px; margin-top: 4px; line-height: 1.4;">${location.address}</p>
+        </div>
+      `);
+    });
+
+    // Cleanup on unmount
+    return () => {
+      if (mapInstanceRef.current) {
+        mapInstanceRef.current.remove();
+        mapInstanceRef.current = null;
+      }
+    };
+  }, []);
+
   return (
-    <MapContainer
-      center={[centerLat, centerLng]}
-      zoom={17}
-      scrollWheelZoom={false}
+    <div 
+      ref={mapRef} 
       style={{ height: '100%', width: '100%', minHeight: '280px' }}
-      className="rounded-l-2xl lg:rounded-l-2xl lg:rounded-r-none"
-    >
-      <TileLayer
-        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-      />
-      {locations.map((location, index) => (
-        <Marker key={index} position={location.coordinates}>
-          <Popup>
-            <div className="text-sm">
-              <strong className="text-secondary">{location.name}</strong>
-              <p className="text-muted-foreground mt-1">{location.address}</p>
-            </div>
-          </Popup>
-        </Marker>
-      ))}
-    </MapContainer>
+      className="rounded-t-2xl lg:rounded-t-none lg:rounded-l-2xl"
+    />
   );
 };
 
