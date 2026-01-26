@@ -39,16 +39,16 @@ const Hero = () => {
                 <h3 className="font-semibold text-secondary">Working Hours</h3>
                 <div className="space-y-1 text-sm text-foreground">
                   <div className="flex justify-between">
-                    <span>Tuesday - Saturday</span>
-                    <span className="font-medium">10:00AM - 10:00PM</span>
+                    <span>Monday - Saturday</span>
+                    <span className="font-medium">10:00 AM - 9:00 PM</span>
                   </div>
                   <div className="flex justify-between">
                     <span>Sunday</span>
-                    <span className="font-medium">11:30AM - 3:00PM</span>
+                    <span className="font-medium text-muted-foreground">Closed</span>
                   </div>
                 </div>
                 <div className="pt-2">
-                  <div className="text-xs text-muted-foreground mb-2">Monday Closed</div>
+                  <div className="text-xs text-muted-foreground mb-2">Sunday: Available by prior appointment only</div>
                   <Button 
                     className="w-full bg-secondary hover:bg-secondary/90 text-secondary-foreground rounded-xl transition-all duration-300 hover:scale-105"
                     asChild
