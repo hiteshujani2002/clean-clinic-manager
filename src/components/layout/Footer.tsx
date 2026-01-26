@@ -70,11 +70,15 @@ const Footer = () => {
                 <span className="text-muted-foreground">drjyotisdentalcare@gmail.com</span>
               </div>
               <div className="flex items-start space-x-3">
-                <MapPin className="w-4 h-4 text-primary mt-0.5" />
+                <MapPin className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
                 <span className="text-muted-foreground">
-                  Shop no 17, ground floor, HILTON TOWER,<br />
-                  Jijamata Rd, Sher E Punjab, Sher E Punjab Colony,<br />
-                  Andheri East, Mumbai, Maharashtra 400093
+                  <strong className="text-foreground">Clinic 1:</strong> Shop no 17, ground floor, HILTON TOWER, Jijamata Rd, Sher E Punjab, Andheri East, Mumbai 400093
+                </span>
+              </div>
+              <div className="flex items-start space-x-3">
+                <MapPin className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
+                <span className="text-muted-foreground">
+                  <strong className="text-foreground">Clinic 2:</strong> Shop no.15, New Pump House, Jijamata chowk, opposite Hanjar nagar society, Andheri East, Mumbai 400093
                 </span>
               </div>
               <div className="flex items-start space-x-3">
