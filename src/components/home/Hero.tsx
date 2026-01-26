@@ -28,13 +28,13 @@ const Hero = () => {
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-secondary leading-tight">
                 Dr. Jyoti's Dental Care
               </h1>
-              <p className="text-base sm:text-lg text-muted-foreground max-w-xl">
+              <p className="text-base sm:text-lg text-muted-foreground">
                 If you are searching for a dentist near you in Andheri East, we offer ethical, gentle, and advanced dental treatment for all age groups.
               </p>
             </div>
 
             {/* Working Hours Card */}
-            <div className="bg-primary/10 border border-primary/20 rounded-2xl p-4 sm:p-6 max-w-sm animate-scale-in">
+            <div className="bg-primary/10 border border-primary/20 rounded-2xl p-4 sm:p-6 lg:max-w-md animate-scale-in">
               <div className="space-y-3">
                 <h3 className="font-semibold text-secondary">Working Hours</h3>
                 <div className="space-y-1 text-sm text-foreground">
