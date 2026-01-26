@@ -73,8 +73,8 @@ const Contact = () => {
                 </CardHeader>
                 <CardContent>
                   <div className="space-y-2">
-                    <p>Main Office: <strong>(555) 123-4567</strong></p>
-                    <p>Emergency Line: <strong>(555) 911-HELP</strong></p>
+                    <p>Phone: <strong>+91 9167544950</strong></p>
+                    <p>Email: <strong>drjyotisdentalcare@gmail.com</strong></p>
                   </div>
                 </CardContent>
               </Card>
@@ -89,15 +89,18 @@ const Contact = () => {
                 <CardContent>
                   <div className="space-y-4">
                     <div>
-                      <p className="font-semibold">Address</p>
-                      <p>Shop no 17, ground floor, HILTON TOWER,<br />Jijamata Rd, Sher E Punjab, Sher E Punjab Colony,<br />Andheri East, Mumbai, Maharashtra 400093</p>
+                      <p className="font-semibold">Clinic 1</p>
+                      <p>Shop no 17, ground floor, HILTON TOWER,<br />Jijamata Rd, Sher E Punjab,<br />Andheri East, Mumbai 400093</p>
+                    </div>
+                    <div>
+                      <p className="font-semibold">Clinic 2</p>
+                      <p>Shop no.15, New Pump House,<br />Jijamata chowk, opposite Hanjar nagar society,<br />Andheri East, Mumbai 400093</p>
                     </div>
                     <div>
                       <p className="font-semibold">Office Hours</p>
                       <div className="space-y-1 text-sm">
-                        <p>Monday - Friday: 8:00 AM - 6:00 PM</p>
-                        <p>Saturday: 9:00 AM - 3:00 PM</p>
-                        <p>Sunday: Emergency Only</p>
+                        <p>Monday - Saturday: 10:00 AM - 9:00 PM</p>
+                        <p>Sunday: Closed (Available by prior appointment only)</p>
                       </div>
                     </div>
                   </div>
@@ -106,12 +109,14 @@ const Contact = () => {
 
               <Card>
                 <CardContent className="p-6">
-                  <div className="bg-gradient-to-r from-red-500 to-pink-500 text-white p-4 rounded-lg text-center">
+                  <div className="bg-gradient-to-r from-primary to-secondary text-white p-4 rounded-lg text-center">
                     <Clock className="w-8 h-8 mx-auto mb-2" />
-                    <h3 className="font-bold text-lg">Dental Emergency?</h3>
-                    <p className="mb-3">Call our 24/7 emergency line</p>
-                    <Button variant="secondary" size="lg">
-                      (555) 911-HELP
+                    <h3 className="font-bold text-lg">Need Urgent Care?</h3>
+                    <p className="mb-3">Contact us via WhatsApp</p>
+                    <Button variant="secondary" size="lg" asChild>
+                      <a href="https://api.whatsapp.com/send/?phone=919167544950&text&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer">
+                        WhatsApp Us
+                      </a>
                     </Button>
                   </div>
                 </CardContent>
