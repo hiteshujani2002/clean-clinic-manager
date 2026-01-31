@@ -32,9 +32,9 @@ const Navigation = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
             <img 
-              src="/lovable-uploads/74447014-333c-4b39-8432-e4bba289edda.png" 
+              src="/lovable-uploads/new-logo.png" 
               alt="Dr.Jyoti's Dental Care Logo" 
-              className="h-12 w-auto"
+              className="h-12 w-auto object-contain"
             />
             <div className="hidden sm:block">
               <h1 className="text-xl font-bold text-foreground">Dr.Jyoti's Dental Care</h1>
@@ -89,11 +89,11 @@ const Navigation = () => {
               </SheetTrigger>
               <SheetContent side="right" className="w-80">
                 <div className="flex flex-col space-y-4 mt-8">
-                  <div className="flex items-center space-x-2 pb-4 border-b">
+                    <div className="flex items-center space-x-2 pb-4 border-b">
                     <img 
-                      src="/lovable-uploads/74447014-333c-4b39-8432-e4bba289edda.png" 
+                      src="/lovable-uploads/new-logo.png" 
                       alt="Dr.Jyoti's Dental Care Logo" 
-                      className="h-10 w-auto"
+                      className="h-10 w-auto object-contain"
                     />
                     <div>
                       <h2 className="text-lg font-bold">Dr.Jyoti's Dental Care</h2>
