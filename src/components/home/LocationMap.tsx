@@ -21,7 +21,7 @@ interface Location {
 
 const locations: Location[] = [
   {
-    name: "Hilton Tower Clinic",
+    name: "Sher-E-Punjab",
     address: "Shop no 17, HILTON TOWER, Jijamata Rd, Sher E Punjab, Andheri East, Mumbai 400093",
     coordinates: [19.1073, 72.8565],
   },
