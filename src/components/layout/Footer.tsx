@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom';
 import { Phone, Mail, MapPin, Clock, Facebook, Instagram } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import logo from '@/assets/logo.jpg';
 
 const Footer = () => {
   return (
@@ -11,7 +10,7 @@ const Footer = () => {
           {/* Clinic Info */}
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
-              <img src={logo} alt="Dr.Jyoti's Dental Care Logo" className="w-12 h-12 object-contain" />
+              <img src="/lovable-uploads/new-logo.png" alt="Dr.Jyoti's Dental Care Logo" className="w-12 h-12 object-contain" />
               <div>
                 <h3 className="text-lg font-bold">Dr.Jyoti's Dental Care</h3>
                 <p className="text-sm text-muted-foreground">Cosmetic and General Dentistry</p>
