@@ -165,11 +165,11 @@ const Inquiries = () => {
               Our Locations
             </h3>
           </div>
-          <Card className="border-0 shadow-lg rounded-2xl overflow-hidden">
+          <Card className="border-0 shadow-lg rounded-2xl overflow-hidden relative z-0">
             <CardContent className="p-0">
               <div className="flex flex-col lg:flex-row min-h-[320px]">
                 {/* Google Maps Embed - Left Side */}
-                <div className="w-full lg:w-1/2 h-[280px] lg:h-auto relative overflow-hidden rounded-t-2xl lg:rounded-t-none lg:rounded-l-2xl">
+                <div className="w-full lg:w-1/2 h-[280px] lg:h-auto relative overflow-hidden rounded-t-2xl lg:rounded-t-none lg:rounded-l-2xl isolate" style={{ zIndex: 0 }}>
                   <Suspense fallback={<div className="w-full h-full min-h-[280px] bg-muted animate-pulse" />}>
                     <LocationMap />
                   </Suspense>
