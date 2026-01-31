@@ -142,6 +142,21 @@ All colors MUST be HSL.
   }
 }
 
+/* Constrain Leaflet map z-index to prevent overlap with navigation */
+.leaflet-container {
+  z-index: 0 !important;
+}
+
+.leaflet-pane,
+.leaflet-control-container {
+  z-index: 0 !important;
+}
+
+.leaflet-top,
+.leaflet-bottom {
+  z-index: 10 !important;
+}
+
 /* Custom animations for better user experience */
 @layer utilities {
   .animate-fade-in {

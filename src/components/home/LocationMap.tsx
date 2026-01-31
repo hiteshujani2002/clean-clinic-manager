@@ -80,7 +80,7 @@ const LocationMap = () => {
   return (
     <div 
       ref={mapRef} 
-      style={{ height: '100%', width: '100%', minHeight: '280px' }}
+      style={{ height: '100%', width: '100%', minHeight: '280px', position: 'relative', zIndex: 0 }}
       className="rounded-t-2xl lg:rounded-t-none lg:rounded-l-2xl"
     />
   );
