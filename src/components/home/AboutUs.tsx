@@ -52,11 +52,8 @@ const AboutUs = () => {
           {/* Right Side - Content */}
           <div className="space-y-6 animate-slide-up">
             <div className="space-y-4">
-              <span className="text-sm font-medium text-muted-foreground tracking-wider uppercase">
+              <h2 className="text-sm font-medium text-muted-foreground tracking-wider uppercase">
                 About Us
-              </span>
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-secondary">
-                About Dr. Jyoti's Dental Care
               </h2>
             </div>
 
