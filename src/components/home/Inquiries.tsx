@@ -48,7 +48,7 @@ const Inquiries = () => {
 
   const locations = [
     {
-      name: "Hilton Tower Clinic",
+      name: "Sher-E-Punjab",
       address: "Shop no 17, HILTON TOWER, Jijamata Rd, Sher E Punjab, Andheri East, Mumbai 400093",
       directionsUrl: "https://www.google.com/maps/dir/?api=1&destination=Shop+no+17+HILTON+TOWER+Jijamata+Rd+Sher+E+Punjab+Andheri+East+Mumbai+400093"
     },
