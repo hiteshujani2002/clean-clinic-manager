@@ -17,8 +17,7 @@ const Footer = () => {
               </div>
             </div>
             <p className="text-sm text-muted-foreground">
-              Professional dental care with modern technology and a gentle touch. 
-              Creating beautiful, healthy smiles for our community.
+              Your trusted dental clinic in Andheri East, Mumbai, offering complete dental care under one roof. Safe, ethical, and modern treatments designed around your comfort. Because your smile deserves expert care—near you.
             </p>
             <div className="flex space-x-2">
               <Button size="sm" variant="outline" asChild>
