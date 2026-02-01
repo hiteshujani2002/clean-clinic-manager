@@ -27,7 +27,7 @@ const AboutUs = () => {
             </div>
             
             {/* Top right smaller image */}
-            <div className="absolute top-4 right-0 w-[45%] h-[40%] rounded-2xl overflow-hidden shadow-lg z-20 border-4 border-background">
+            <div className="absolute top-0 right-0 w-[45%] h-[40%] rounded-2xl overflow-hidden shadow-lg z-20 border-4 border-background">
               <img 
                 src={aboutDental3} 
                 alt="Happy patient with beautiful smile"
