@@ -13,7 +13,7 @@ const Footer = () => {
               <img src="/lovable-uploads/new-logo.png" alt="Dr.Jyoti's Dental Care Logo" className="w-12 h-12 object-contain" />
               <div>
                 <h3 className="text-lg font-bold">Dr.Jyoti's Dental Care</h3>
-                <p className="text-sm text-muted-foreground">Cosmetic and General Dentistry</p>
+                <p className="text-sm text-muted-foreground">Advanced Cosmetic and Dental Implant Centre</p>
               </div>
             </div>
             <p className="text-sm text-muted-foreground">
