@@ -52,7 +52,7 @@ const AboutUs = () => {
           {/* Right Side - Content */}
           <div className="space-y-6 animate-slide-up">
             <div className="space-y-4">
-              <h2 className="text-sm font-medium text-muted-foreground tracking-wider uppercase">
+              <h2 className="text-sm font-medium text-muted-foreground tracking-wider uppercase text-center">
                 About Us
               </h2>
             </div>
