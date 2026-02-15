@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { Phone, Calendar, Menu, Smile, User } from 'lucide-react';
@@ -8,21 +8,27 @@ import { cn } from '@/lib/utils';
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
 
   const navigation = [
-    { name: 'Home', href: '#home' },
-    { name: 'Services', href: '#services' },
-    { name: 'Doctors', href: '#doctors' },
-    { name: 'Testimonials', href: '#testimonials' },
-    { name: 'Contact', href: '#contact' },
+    { name: 'Home', href: '/#home' },
+    { name: 'Services', href: '/#services' },
+    { name: 'Doctors', href: '/#doctors' },
+    { name: 'Testimonials', href: '/#testimonials' },
+    { name: 'Contact', href: '/#contact' },
   ];
 
-  const scrollToSection = (href: string) => {
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-      setIsOpen(false);
+  const handleNavClick = (href: string) => {
+    const [path, hash] = href.split('#');
+    if (location.pathname === '/' || location.pathname === path) {
+      const element = document.querySelector(`#${hash}`);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    } else {
+      navigate(href);
     }
+    setIsOpen(false);
   };
 
   return (
@@ -47,7 +53,7 @@ const Navigation = () => {
             {navigation.map((item) => (
               <button
                 key={item.name}
-                onClick={() => scrollToSection(item.href)}
+                onClick={() => handleNavClick(item.href)}
                 className="px-4 py-2 text-sm font-medium transition-all duration-300 hover:text-primary text-muted-foreground relative group"
               >
                 {item.name}
@@ -105,7 +111,7 @@ const Navigation = () => {
                     {navigation.map((item) => (
                       <button
                         key={item.name}
-                        onClick={() => scrollToSection(item.href)}
+                        onClick={() => handleNavClick(item.href)}
                         className="px-3 py-3 text-sm font-medium rounded-md transition-colors hover:bg-accent text-muted-foreground hover:text-foreground text-left"
                       >
                         {item.name}

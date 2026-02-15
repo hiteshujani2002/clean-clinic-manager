@@ -1,4 +1,5 @@
 import { Button } from '@/components/ui/button';
+import { Link } from 'react-router-dom';
 
 const Services = () => {
   const services = [
@@ -6,6 +7,7 @@ const Services = () => {
       icon: "🦷",
       title: "General Dentistry",
       description: "Comprehensive dental care for all ages",
+      href: "/general-dentistry",
       items: [
         "Dental check-ups & X-rays",
         "Teeth cleaning (prophylaxis)",
@@ -16,6 +18,7 @@ const Services = () => {
       icon: "✨",
       title: "Cosmetic Dentistry", 
       description: "Beautiful smiles with advanced aesthetics",
+      href: "/cosmetic-dentistry",
       items: [
         "Braces, aligners & Invisalign (orthodontics)",
         "Teeth whitening"
@@ -25,6 +28,7 @@ const Services = () => {
       icon: "🔧",
       title: "Restorative Care",
       description: "Repair and restore damaged teeth",
+      href: "/restorative-care",
       items: [
         "Root canal treatment",
         "Crowns & bridges", 
@@ -76,6 +80,11 @@ const Services = () => {
                   </li>
                 ))}
               </ul>
+              <div className="mt-4 pt-4 border-t border-border">
+                <Button variant="outline" size="sm" className="w-full rounded-full hover:bg-secondary hover:text-secondary-foreground transition-colors" asChild>
+                  <Link to={service.href}>View All Details</Link>
+                </Button>
+              </div>
             </div>
           ))}
         </div>
