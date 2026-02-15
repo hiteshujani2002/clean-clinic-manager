@@ -1,12 +1,16 @@
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
+import serviceGeneral from '@/assets/service-general.jpg';
+import serviceCosmetic from '@/assets/service-cosmetic.jpg';
+import serviceRestorative from '@/assets/service-restorative.jpg';
 
 const Services = () => {
   const services = [
     {
-      icon: "🦷",
+      image: serviceGeneral,
       title: "General Dentistry",
-      description: "Comprehensive dental care for all ages",
+      description: "Complete oral health solutions for your family, from routine cleanings to detailed X-rays.",
       href: "/general-dentistry",
       items: [
         "Dental check-ups & X-rays",
@@ -15,9 +19,9 @@ const Services = () => {
       ]
     },
     {
-      icon: "✨",
-      title: "Cosmetic Dentistry", 
-      description: "Beautiful smiles with advanced aesthetics",
+      image: serviceCosmetic,
+      title: "Cosmetic Dentistry",
+      description: "Enhance your natural smile with our advanced whitening and invisible aligner treatments.",
       href: "/cosmetic-dentistry",
       items: [
         "Braces, aligners & Invisalign (orthodontics)",
@@ -25,13 +29,13 @@ const Services = () => {
       ]
     },
     {
-      icon: "🔧",
+      image: serviceRestorative,
       title: "Restorative Care",
-      description: "Repair and restore damaged teeth",
+      description: "Durable and natural-looking solutions to restore your teeth's strength and function.",
       href: "/restorative-care",
       items: [
         "Root canal treatment",
-        "Crowns & bridges", 
+        "Crowns & bridges",
         "Surgical extractions",
         "Dental implants",
         "Gum surgeries (periodontal)"
@@ -64,26 +68,41 @@ const Services = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-6xl mx-auto">
           {services.map((service, index) => (
-            <div key={index} className="bg-card rounded-2xl p-6 md:p-8 shadow-sm border border-border hover:shadow-md transition-shadow">
-              <div className="flex flex-col items-center text-center">
-                <div className="w-20 h-20 md:w-24 md:h-24 mb-4 md:mb-6 bg-secondary rounded-3xl flex items-center justify-center text-3xl md:text-4xl">
-                  {service.icon}
-                </div>
-                <h3 className="text-lg md:text-xl font-bold text-secondary mb-2">{service.title}</h3>
-                <p className="text-sm md:text-base text-muted-foreground mb-4 md:mb-6">{service.description}</p>
+            <div
+              key={index}
+              className="bg-card rounded-2xl overflow-hidden shadow-md border border-border/60 hover:shadow-lg transition-all duration-300 flex flex-col"
+            >
+              <div className="w-full h-48 md:h-52 overflow-hidden">
+                <img
+                  src={service.image}
+                  alt={service.title}
+                  className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                />
               </div>
-              <ul className="space-y-2 md:space-y-3">
-                {service.items.map((item, itemIndex) => (
-                  <li key={itemIndex} className="text-sm md:text-base text-muted-foreground flex items-start">
-                    <span className="text-secondary mr-2 md:mr-3 flex-shrink-0 mt-0.5">•</span>
-                    <span className="leading-relaxed">{item}</span>
-                  </li>
-                ))}
-              </ul>
-              <div className="mt-4 pt-4 border-t border-border">
-                <Button variant="outline" size="sm" className="w-full rounded-full hover:bg-secondary hover:text-secondary-foreground transition-colors" asChild>
-                  <Link to={service.href}>View All Details</Link>
-                </Button>
+              <div className="p-6 md:p-8 flex flex-col flex-1">
+                <h3 className="text-lg md:text-xl font-bold text-secondary mb-2">{service.title}</h3>
+                <p className="text-sm md:text-base text-muted-foreground mb-4 leading-relaxed">{service.description}</p>
+                <ul className="space-y-2 md:space-y-3 flex-1">
+                  {service.items.map((item, itemIndex) => (
+                    <li key={itemIndex} className="text-sm md:text-base text-muted-foreground flex items-start">
+                      <span className="text-secondary mr-2 md:mr-3 flex-shrink-0 mt-0.5">•</span>
+                      <span className="leading-relaxed">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+                <div className="mt-6 pt-4 border-t border-border">
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    className="w-full rounded-full hover:bg-secondary hover:text-secondary-foreground transition-colors group"
+                    asChild
+                  >
+                    <Link to={service.href}>
+                      View All Details
+                      <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
+                    </Link>
+                  </Button>
+                </div>
               </div>
             </div>
           ))}
