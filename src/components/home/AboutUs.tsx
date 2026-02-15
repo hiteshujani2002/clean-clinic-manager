@@ -16,40 +16,37 @@ const AboutUs = () => {
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left Side - Creative Image Composition */}
-          <div className="relative h-[400px] md:h-[500px] lg:h-[550px] animate-fade-in overflow-hidden">
-            {/* Main large image */}
-            <div className="absolute top-0 left-0 w-[62%] h-[70%] rounded-2xl overflow-hidden shadow-lg z-10">
+          <div className="relative h-[400px] md:h-[500px] lg:h-[550px] animate-fade-in">
+            {/* Main large image - left side, top half */}
+            <div className="absolute top-0 left-0 w-[58%] h-[55%] rounded-2xl overflow-hidden shadow-lg z-10">
               <img 
                 src={aboutDental1} 
                 alt="Dentist consulting with patient"
                 className="w-full h-full object-cover"
-                style={{ aspectRatio: '4/3' }}
               />
             </div>
             
             {/* Top right smaller image */}
-            <div className="absolute top-0 right-0 w-[42%] h-[38%] rounded-2xl overflow-hidden shadow-lg z-20 border-4 border-background">
+            <div className="absolute top-0 right-0 w-[38%] h-[45%] rounded-2xl overflow-hidden shadow-lg z-20 border-4 border-background">
               <img 
                 src={aboutDental3} 
                 alt="Happy patient with beautiful smile"
                 className="w-full h-full object-cover"
-                style={{ aspectRatio: '4/3' }}
               />
             </div>
             
             {/* Bottom right image */}
-            <div className="absolute bottom-4 right-0 w-[48%] h-[42%] rounded-2xl overflow-hidden shadow-lg z-30 border-4 border-background">
+            <div className="absolute bottom-0 right-0 w-[55%] h-[48%] rounded-2xl overflow-hidden shadow-lg z-30 border-4 border-background">
               <img 
                 src={aboutDental2} 
                 alt="Modern dental equipment"
                 className="w-full h-full object-cover"
-                style={{ aspectRatio: '4/3' }}
               />
             </div>
 
             {/* Decorative element */}
-            <div className="absolute bottom-0 left-0 w-24 h-24 bg-primary/20 rounded-2xl -z-10" />
-            <div className="absolute top-0 right-0 w-16 h-16 bg-secondary/10 rounded-full -z-10" />
+            <div className="absolute bottom-0 left-0 w-24 h-24 bg-primary/20 rounded-2xl z-0" />
+            <div className="absolute -top-2 right-[38%] w-16 h-16 bg-secondary/10 rounded-full -z-10" />
           </div>
 
           {/* Right Side - Content */}
