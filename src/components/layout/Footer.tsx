@@ -37,10 +37,10 @@ const Footer = () => {
           <div className="space-y-4">
             <h4 className="text-lg font-semibold">Quick Links</h4>
             <ul className="space-y-2 text-sm">
-              <li><a href="#home" className="text-muted-foreground hover:text-primary transition-colors">Home</a></li>
-              <li><a href="#services" className="text-muted-foreground hover:text-primary transition-colors">Services</a></li>
-              <li><a href="#doctors" className="text-muted-foreground hover:text-primary transition-colors">Doctors</a></li>
-              <li><a href="#testimonials" className="text-muted-foreground hover:text-primary transition-colors">Testimonials</a></li>
+              <li><Link to="/" className="text-muted-foreground hover:text-primary transition-colors">Home</Link></li>
+              <li><Link to="/#services" className="text-muted-foreground hover:text-primary transition-colors">Services</Link></li>
+              <li><Link to="/#doctors" className="text-muted-foreground hover:text-primary transition-colors">Doctors</Link></li>
+              <li><Link to="/#testimonials" className="text-muted-foreground hover:text-primary transition-colors">Testimonials</Link></li>
             </ul>
           </div>
 
@@ -48,10 +48,10 @@ const Footer = () => {
           <div className="space-y-4">
             <h4 className="text-lg font-semibold">Services</h4>
             <ul className="space-y-2 text-sm">
-              <li><span className="text-muted-foreground">General Dentistry</span></li>
-              <li><span className="text-muted-foreground">Cosmetic Dentistry</span></li>
-              <li><span className="text-muted-foreground">Restorative Care</span></li>
-              <li><span className="text-muted-foreground">Dental Implants</span></li>
+              <li><Link to="/general-dentistry" className="text-muted-foreground hover:text-primary transition-colors">General Dentistry</Link></li>
+              <li><Link to="/cosmetic-dentistry" className="text-muted-foreground hover:text-primary transition-colors">Cosmetic Dentistry</Link></li>
+              <li><Link to="/restorative-care" className="text-muted-foreground hover:text-primary transition-colors">Restorative Care</Link></li>
+              <li><Link to="/restorative-care" className="text-muted-foreground hover:text-primary transition-colors">Dental Implants</Link></li>
             </ul>
           </div>
 
