@@ -1,47 +1,55 @@
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Stethoscope, Sparkles, PenTool, Activity, Scissors, Smile, ShieldCheck } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
+
+import serviceGeneralDentistry from '@/assets/service-general-dentistry.jpg';
+import serviceTeethScaling from '@/assets/service-teeth-scaling.jpg';
+import serviceDentalFillings from '@/assets/service-dental-fillings.jpg';
+import serviceRootCanal from '@/assets/service-root-canal.jpg';
+import serviceToothExtraction from '@/assets/service-tooth-extraction.jpg';
+import serviceCosmeticDentistry from '@/assets/service-cosmetic-dentistry.jpg';
+import servicePreventiveCare from '@/assets/service-preventive-care.jpg';
 
 const Services = () => {
   const services = [
     {
-      icon: Stethoscope,
+      image: serviceGeneralDentistry,
       title: "General Dentistry & Dental Check-ups",
       description: "Comprehensive oral examinations and preventive care to keep your teeth and gums healthy for life.",
       href: "/general-dentistry",
     },
     {
-      icon: Sparkles,
+      image: serviceTeethScaling,
       title: "Teeth Scaling & Polishing",
       description: "Professional deep cleaning to remove plaque and tartar buildup, leaving your teeth smooth and bright.",
       href: "/general-dentistry",
     },
     {
-      icon: PenTool,
+      image: serviceDentalFillings,
       title: "Dental Fillings (Composite Fillings)",
       description: "Tooth-colored composite restorations that blend seamlessly with your natural teeth for lasting results.",
       href: "/restorative-care",
     },
     {
-      icon: Activity,
+      image: serviceRootCanal,
       title: "Root Canal Treatment (RCT)",
       description: "Pain-free root canal therapy to save infected teeth and restore full function with precision care.",
       href: "/restorative-care",
     },
     {
-      icon: Scissors,
+      image: serviceToothExtraction,
       title: "Tooth Extraction & Wisdom Tooth Removal",
       description: "Safe and gentle tooth extractions, including impacted wisdom teeth, with minimal discomfort.",
       href: "/restorative-care",
     },
     {
-      icon: Smile,
+      image: serviceCosmeticDentistry,
       title: "Cosmetic Dentistry",
       description: "Transform your smile with advanced whitening, veneers, and aesthetic treatments tailored to you.",
       href: "/cosmetic-dentistry",
     },
     {
-      icon: ShieldCheck,
+      image: servicePreventiveCare,
       title: "Preventive Dental Care",
       description: "Proactive treatments including fluoride application, sealants, and oral hygiene guidance for all ages.",
       href: "/general-dentistry",
@@ -72,36 +80,36 @@ const Services = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-8 max-w-7xl mx-auto">
-          {services.map((service, index) => {
-            const Icon = service.icon;
-            return (
-              <div
-                key={index}
-                className="bg-card rounded-2xl overflow-hidden shadow-md border border-border/60 hover:shadow-lg transition-all duration-300 flex flex-col"
-              >
-                <div className="p-6 md:p-8 flex flex-col flex-1">
-                  <div className="w-14 h-14 rounded-xl bg-primary/15 flex items-center justify-center mb-5">
-                    <Icon className="w-7 h-7 text-secondary" />
-                  </div>
-                  <h3 className="text-lg md:text-xl font-bold text-secondary mb-3 leading-tight">{service.title}</h3>
-                  <p className="text-sm md:text-base text-muted-foreground leading-relaxed flex-1">{service.description}</p>
-                  <div className="mt-6 pt-4 border-t border-border">
-                    <Button
-                      variant="outline"
-                      size="sm"
-                      className="w-full rounded-full hover:bg-secondary hover:text-secondary-foreground transition-colors group"
-                      asChild
-                    >
-                      <Link to={service.href}>
-                        View All Details
-                        <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
-                      </Link>
-                    </Button>
-                  </div>
+          {services.map((service, index) => (
+            <div
+              key={index}
+              className="bg-card rounded-2xl overflow-hidden shadow-md border border-border/60 hover:shadow-lg transition-all duration-300 flex flex-col"
+            >
+              <img
+                src={service.image}
+                alt={service.title}
+                className="w-full aspect-[3/2] object-cover"
+                loading="lazy"
+              />
+              <div className="p-6 md:p-8 flex flex-col flex-1">
+                <h3 className="text-lg md:text-xl font-bold text-secondary mb-3 leading-tight">{service.title}</h3>
+                <p className="text-sm md:text-base text-muted-foreground leading-relaxed flex-1">{service.description}</p>
+                <div className="mt-6 pt-4 border-t border-border">
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    className="w-full rounded-full hover:bg-secondary hover:text-secondary-foreground transition-colors group"
+                    asChild
+                  >
+                    <Link to={service.href}>
+                      View All Details
+                      <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
+                    </Link>
+                  </Button>
                 </div>
               </div>
-            );
-          })}
+            </div>
+          ))}
         </div>
       </div>
     </section>
