@@ -48,10 +48,13 @@ const Footer = () => {
           <div className="space-y-4">
             <h4 className="text-lg font-semibold">Services</h4>
             <ul className="space-y-2 text-sm">
-              <li><Link to="/general-dentistry" className="text-muted-foreground hover:text-primary transition-colors">General Dentistry</Link></li>
+              <li><Link to="/general-dentistry" className="text-muted-foreground hover:text-primary transition-colors">General Dentistry & Check-ups</Link></li>
+              <li><Link to="/general-dentistry" className="text-muted-foreground hover:text-primary transition-colors">Teeth Scaling & Polishing</Link></li>
+              <li><Link to="/restorative-care" className="text-muted-foreground hover:text-primary transition-colors">Dental Fillings</Link></li>
+              <li><Link to="/restorative-care" className="text-muted-foreground hover:text-primary transition-colors">Root Canal Treatment</Link></li>
+              <li><Link to="/restorative-care" className="text-muted-foreground hover:text-primary transition-colors">Tooth Extraction</Link></li>
               <li><Link to="/cosmetic-dentistry" className="text-muted-foreground hover:text-primary transition-colors">Cosmetic Dentistry</Link></li>
-              <li><Link to="/restorative-care" className="text-muted-foreground hover:text-primary transition-colors">Restorative Care</Link></li>
-              <li><Link to="/restorative-care" className="text-muted-foreground hover:text-primary transition-colors">Dental Implants</Link></li>
+              <li><Link to="/general-dentistry" className="text-muted-foreground hover:text-primary transition-colors">Preventive Dental Care</Link></li>
             </ul>
           </div>
 
