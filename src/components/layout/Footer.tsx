@@ -60,8 +60,8 @@ const Footer = () => {
             <h4 className="text-lg font-semibold">Contact Info</h4>
             <div className="space-y-3 text-sm">
               <div className="flex items-center space-x-3">
-                <Phone className="w-4 h-4 text-primary" />
-                <span className="text-muted-foreground">+91 9167544950</span>
+                <Phone className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
+                <span className="text-muted-foreground">+91 9167544950 / 9321844795 / 8369962388</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="w-4 h-4 text-primary" />
