@@ -55,7 +55,7 @@ const Inquiries = () => {
     {
       name: "Pump House Clinic",
       address: "Shop no.15, New Pump House, Jijamata chowk, opposite Hanjar nagar society, Andheri East, Mumbai 400093",
-      directionsUrl: "https://www.google.com/maps/dir/?api=1&destination=New+Pump+House+Shop+no.15+Jijamata+chowk+opposite+Hanjar+nagar+society+Andheri+East+Mumbai+Maharashtra+400093"
+      directionsUrl: "https://maps.app.goo.gl/GHLfMRGj35hnh7WXA"
     }
   ];
 
