@@ -16,9 +16,9 @@ const AboutUs = () => {
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left Side - Creative Image Composition */}
-          <div className="relative h-[400px] md:h-[500px] lg:h-[550px] animate-fade-in">
-            {/* Main large image - left side, top half */}
-            <div className="absolute top-0 left-0 w-[58%] h-[55%] rounded-2xl overflow-hidden shadow-lg z-10">
+          <div className="relative h-[350px] sm:h-[400px] md:h-[480px] lg:h-[520px] animate-fade-in">
+            {/* Main large image - left side */}
+            <div className="absolute top-[5%] left-0 w-[62%] h-[65%] rounded-2xl overflow-hidden shadow-lg z-10 border-2 border-background">
               <img 
                 src={aboutDental1} 
                 alt="Dentist consulting with patient"
@@ -26,27 +26,26 @@ const AboutUs = () => {
               />
             </div>
             
-            {/* Top right smaller image */}
-            <div className="absolute top-0 right-0 w-[38%] h-[45%] rounded-2xl overflow-hidden shadow-lg z-20 border-4 border-background">
+            {/* Top right image - overlapping main */}
+            <div className="absolute top-0 right-[2%] w-[42%] h-[45%] rounded-2xl overflow-hidden shadow-lg z-20 border-2 border-background">
               <img 
                 src={aboutDental3} 
-                alt="Happy patient with beautiful smile"
+                alt="Clinic interior"
                 className="w-full h-full object-cover"
               />
             </div>
             
-            {/* Bottom right image */}
-            <div className="absolute bottom-0 right-0 w-[55%] h-[48%] rounded-2xl overflow-hidden shadow-lg z-30 border-4 border-background">
+            {/* Bottom right image - overlapping main */}
+            <div className="absolute bottom-[2%] right-[2%] w-[48%] h-[45%] rounded-2xl overflow-hidden shadow-lg z-30 border-2 border-background">
               <img 
                 src={aboutDental2} 
-                alt="Modern dental equipment"
+                alt="Patient care"
                 className="w-full h-full object-cover"
               />
             </div>
 
-            {/* Decorative element */}
-            <div className="absolute bottom-0 left-0 w-24 h-24 bg-primary/20 rounded-2xl z-0" />
-            <div className="absolute -top-2 right-[38%] w-16 h-16 bg-secondary/10 rounded-full -z-10" />
+            {/* Decorative elements */}
+            <div className="absolute bottom-0 left-0 w-20 h-20 bg-primary/15 rounded-2xl -z-10" />
           </div>
 
           {/* Right Side - Content */}
