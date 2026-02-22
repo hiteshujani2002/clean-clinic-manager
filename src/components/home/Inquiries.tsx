@@ -116,7 +116,7 @@ const Inquiries = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold text-secondary mb-1">Phone</h3>
-                    <p className="text-muted-foreground">9167544950</p>
+                    <p className="text-muted-foreground">9167544950 / 9321844795 / 8369962388</p>
                   </div>
                 </div>
               </CardContent>
