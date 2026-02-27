@@ -22,25 +22,25 @@ const Services = () => {
       image: serviceTeethScaling,
       title: "Teeth Scaling & Polishing",
       description: "Professional teeth cleaning and scaling in Andheri East helps remove plaque, tartar, and stains. This treatment is essential for healthy gums and fresh breath.",
-      href: "/general-dentistry",
+      href: "/teeth-scaling-polishing",
     },
     {
       image: serviceDentalFillings,
       title: "Dental Fillings (Composite Fillings)",
       description: "We offer tooth-colored composite fillings for cavities to restore your tooth's natural appearance and function.",
-      href: "/restorative-care",
+      href: "/dental-fillings",
     },
     {
       image: serviceRootCanal,
       title: "Root Canal Treatment (RCT)",
       description: "Our clinic provides painless root canal treatment in Andheri East, using advanced techniques to save infected teeth and eliminate tooth pain.",
-      href: "/restorative-care",
+      href: "/root-canal-treatment",
     },
     {
       image: serviceToothExtraction,
       title: "Tooth Extraction & Wisdom Tooth Removal",
       description: "Safe and gentle tooth extractions, including wisdom teeth removal, are performed with minimal discomfort and proper after-care.",
-      href: "/restorative-care",
+      href: "/tooth-extraction",
     },
     {
       image: serviceCosmeticDentistry,
@@ -52,7 +52,7 @@ const Services = () => {
       image: servicePreventiveCare,
       title: "Preventive Dental Care",
       description: "We focus on preventive dentistry, including oral hygiene education, fluoride treatments, and regular monitoring to maintain long-term dental health.",
-      href: "/general-dentistry",
+      href: "/preventive-dental-care",
     },
   ];
 
