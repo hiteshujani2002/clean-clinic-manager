@@ -31,7 +31,7 @@ const GeneralDentistry = () => {
               <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
                 Regular cleanings, typically recommended every six months, are essential for maintaining healthy teeth and preventing more serious dental issues. The procedure is quick, painless, and a vital part of your overall oral health care routine.
               </p>
-              <p className="text-sm text-muted-foreground leading-relaxed">
+              <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
                 During the cleaning, a hygienist uses specialized tools to scale away hardened deposits and polish the teeth for a smooth, clean finish.
               </p>
             </div>
