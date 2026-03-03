@@ -36,11 +36,11 @@ const AboutUs = () => {
             </div>
             
             {/* Bottom right image - overlapping main */}
-            <div className="absolute bottom-[2%] right-[2%] w-[48%] h-[45%] rounded-2xl overflow-hidden shadow-lg z-30 border-2 border-background bg-background flex items-center justify-center p-2">
+            <div className="absolute bottom-[2%] right-[2%] w-[48%] h-[45%] rounded-2xl overflow-hidden shadow-lg z-30 border-2 border-background">
               <img 
                 src={aboutDental2} 
                 alt="Patient care"
-                className="w-[90%] h-full object-contain object-top"
+                className="w-full h-full object-cover object-top"
               />
             </div>
 
