@@ -1,4 +1,5 @@
 import Layout from '@/components/layout/Layout';
+import ClinicalExcellence from '@/components/home/ClinicalExcellence';
 import { Button } from '@/components/ui/button';
 import { Check, Calendar, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -122,6 +123,8 @@ const RootCanalTreatment = () => {
           </div>
         </div>
       </section>
+
+      <ClinicalExcellence />
     </Layout>
   );
 };
