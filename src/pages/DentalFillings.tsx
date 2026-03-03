@@ -1,99 +1,123 @@
-import { useEffect } from 'react';
 import Layout from '@/components/layout/Layout';
 import { Button } from '@/components/ui/button';
-import { Check, Calendar } from 'lucide-react';
+import { Check, Calendar, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import aboutDental2 from '@/assets/about-dental-2.jpg';
+import aboutDental1 from '@/assets/about-dental-1.jpg';
 import aboutDental3 from '@/assets/about-dental-3.jpg';
 
 const DentalFillings = () => {
-  useEffect(() => { window.scrollTo(0, 0); }, []);
-
-  const treatments = [
-    {
-      name: "Composite (Tooth-Colored) Fillings",
-      description: "Natural-looking fillings that blend seamlessly with your teeth. Made from durable composite resin, they restore both function and aesthetics."
-    },
-    {
-      name: "Glass Ionomer Fillings",
-      description: "Fluoride-releasing fillings ideal for areas near the gum line or for children's teeth. They help prevent further decay while restoring the tooth."
-    },
-    {
-      name: "Inlays & Onlays",
-      description: "Custom-made restorations for larger cavities that need more support than a standard filling but less than a full crown."
-    },
-    {
-      name: "Cavity Detection & Prevention",
-      description: "Early detection of cavities using digital imaging, followed by minimally invasive filling techniques to preserve as much natural tooth as possible."
-    }
+  const checklistItems = [
+    "Visible cavities or dark spots on the surface of your teeth",
+    "Sensitivity to hot, cold, or sugary foods and drinks",
+    "Food frequently getting trapped between specific teeth",
+    "Minor chips or fractures in the tooth structure",
+    "Replacing old, worn-out silver amalgam fillings with aesthetic composite",
   ];
 
   return (
     <Layout>
-      <section className="py-16 lg:py-24 bg-gradient-to-br from-primary/10 via-background to-accent/20">
-        <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-6 animate-slide-up">
-              <span className="text-sm font-medium text-muted-foreground tracking-wider uppercase">Our Services</span>
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-secondary">Dental Fillings</h1>
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                We offer tooth-colored composite fillings for cavities to restore your tooth's natural appearance and function.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" className="gap-2 bg-secondary hover:bg-secondary/90 text-secondary-foreground rounded-full" asChild>
-                  <a href="https://api.whatsapp.com/send/?phone=919167544950&text&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer">
-                    <Calendar className="w-5 h-5" />Book Appointment
-                  </a>
-                </Button>
-                <Button variant="outline" size="lg" className="rounded-full" asChild>
-                  <Link to="/#services">View All Services</Link>
-                </Button>
-              </div>
-            </div>
-            <div className="relative h-[350px] md:h-[450px] animate-fade-in">
-              <div className="absolute top-0 right-0 w-[75%] h-[80%] rounded-2xl overflow-hidden shadow-lg z-10">
-                <img src={aboutDental2} alt="Dental filling procedure" className="w-full h-full object-cover" />
-              </div>
-              <div className="absolute bottom-0 left-0 w-[50%] h-[55%] rounded-2xl overflow-hidden shadow-lg z-20 border-4 border-background">
-                <img src={aboutDental3} alt="Composite filling" className="w-full h-full object-cover" />
-              </div>
-              <div className="absolute bottom-4 right-4 w-20 h-20 bg-primary/20 rounded-2xl z-0" />
-            </div>
-          </div>
-        </div>
-      </section>
-
+      {/* Hero Section */}
       <section className="py-12 lg:py-20 bg-background">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-secondary mb-4">Our Filling Treatments</h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">Restore your teeth with natural-looking, durable fillings tailored to your needs.</p>
-          </div>
-          <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
-            {treatments.map((treatment, index) => (
-              <div key={index} className="bg-card rounded-2xl p-6 shadow-sm border border-border hover:shadow-md transition-shadow">
-                <div className="flex items-start gap-3 mb-3">
-                  <div className="w-6 h-6 rounded-full bg-secondary flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <Check className="w-4 h-4 text-secondary-foreground" />
-                  </div>
-                  <h3 className="text-lg font-bold text-secondary">{treatment.name}</h3>
-                </div>
-                <p className="text-sm text-muted-foreground leading-relaxed pl-9">{treatment.description}</p>
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="space-y-6">
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-secondary leading-tight">
+                Restore Your Smile with Seamless Tooth-Colored Fillings
+              </h1>
+              <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
+                At Dr. Jyoti's Dental Care, we specialize in high-quality composite fillings in Andheri East that blend perfectly with your natural teeth. Our goal is to restore the strength and function of your tooth while maintaining a flawless, aesthetic appearance.
+              </p>
+            </div>
+            <div className="relative h-[350px] md:h-[420px]">
+              <div className="w-full h-full rounded-2xl overflow-hidden shadow-lg">
+                <img
+                  src={aboutDental1}
+                  alt="Tooth-colored dental filling restoration at Dr. Jyoti's Dental Care"
+                  className="w-full h-full object-cover"
+                />
               </div>
-            ))}
+            </div>
           </div>
         </div>
       </section>
 
+      {/* What Happens Section */}
+      <section className="py-12 lg:py-20 bg-card">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto space-y-6">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-secondary">
+              The Composite Filling Process
+            </h2>
+            <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
+              After gently removing the decayed portion of the tooth, we apply a durable, tooth-colored composite resin in layers. Each layer is hardened using a specialized curing light, and the final filling is shaped and polished to match the contours of your natural bite perfectly.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Who Needs This Section */}
       <section className="py-12 lg:py-20 bg-muted/30">
         <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center space-y-6">
-            <h2 className="text-2xl md:text-3xl font-bold text-secondary">Restore Your Smile Today</h2>
-            <p className="text-muted-foreground">Don't let cavities affect your confidence. Book a consultation for painless, natural-looking dental fillings.</p>
-            <Button size="lg" className="gap-2 bg-secondary hover:bg-secondary/90 text-secondary-foreground rounded-full" asChild>
-              <a href="https://api.whatsapp.com/send/?phone=919167544950&text&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer">
-                <Calendar className="w-5 h-5" />Book a Consultation
-              </a>
+          <div className="grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
+            <div className="space-y-6">
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-secondary">
+                Signs You May Need a Dental Filling
+              </h2>
+              <ul className="space-y-3">
+                {checklistItems.map((item, i) => (
+                  <li key={i} className="flex items-start gap-3">
+                    <div className="w-5 h-5 rounded-full bg-secondary flex items-center justify-center flex-shrink-0 mt-0.5">
+                      <Check className="w-3 h-3 text-secondary-foreground" />
+                    </div>
+                    <span className="text-sm md:text-base text-foreground">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="relative h-[350px] md:h-[400px]">
+              <div className="w-full h-full rounded-2xl overflow-hidden shadow-lg">
+                <img
+                  src={aboutDental3}
+                  alt="Healthy smile after dental filling treatment"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Why It Matters Section */}
+      <section className="py-12 lg:py-20 bg-card">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto space-y-6">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-secondary">
+              Why Choose Composite Fillings?
+            </h2>
+            <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
+              Unlike traditional metal fillings, composite resins bond directly to the tooth structure, providing extra support. They require less tooth removal, prevent further decay, and are virtually invisible, ensuring your smile stays both healthy and beautiful.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Banner */}
+      <section className="py-12 lg:py-16 bg-accent/30">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-8 max-w-4xl mx-auto">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-secondary text-center md:text-left">
+              Don't Let a Small Cavity Turn Into a Big Problem
+            </h2>
+            <Button
+              size="lg"
+              className="gap-2 bg-secondary hover:bg-secondary/90 text-secondary-foreground rounded-full px-8"
+              asChild
+            >
+              <Link to="/#inquiries">
+                <Calendar className="w-5 h-5" />
+                Book Your Appointment
+                <ArrowRight className="w-4 h-4" />
+              </Link>
             </Button>
           </div>
         </div>
