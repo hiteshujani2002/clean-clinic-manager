@@ -113,11 +113,11 @@ const CosmeticDentistry = () => {
               className="gap-2 bg-secondary hover:bg-secondary/90 text-secondary-foreground rounded-full px-8"
               asChild
             >
-              <Link to="/#inquiries">
+              <a href="https://api.whatsapp.com/send/?phone=919167544950" target="_blank" rel="noopener noreferrer">
                 <Calendar className="w-5 h-5" />
                 Book Your Smile Consultation
                 <ArrowRight className="w-4 h-4" />
-              </Link>
+              </a>
             </Button>
           </div>
         </div>
