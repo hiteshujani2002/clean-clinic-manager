@@ -5,6 +5,7 @@ import { Check, Calendar, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import checkupSmile from '@/assets/checkup-smile.png';
 import generalDentistryHero from '@/assets/general-dentistry-hero.jpg';
+import clinicalExcellence1 from '@/assets/clinical-excellence-1.jpg';
 
 const GeneralDentistry = () => {
   const checklistItems = [
