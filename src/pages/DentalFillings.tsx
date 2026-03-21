@@ -5,6 +5,21 @@ import { Check, Calendar, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import fillingsHero from '@/assets/fillings-hero.png';
 import fillingsSigns from '@/assets/fillings-signs.png';
+import fillingsGallery1 from '@/assets/fillings-gallery-1.png';
+import fillingsGallery2 from '@/assets/fillings-gallery-2.png';
+import fillingsGallery3 from '@/assets/fillings-gallery-3.png';
+import fillingsGallery4 from '@/assets/fillings-gallery-4.png';
+import fillingsGallery5 from '@/assets/fillings-gallery-5.png';
+import fillingsGallery6 from '@/assets/fillings-gallery-6.png';
+
+const fillingsGalleryImages = [
+  { src: fillingsGallery1, alt: "Patient smiling after dental filling treatment" },
+  { src: fillingsGallery2, alt: "Dr. Jyoti's dental team in the clinic" },
+  { src: fillingsGallery3, alt: "Before and after dental filling restoration" },
+  { src: fillingsGallery4, alt: "Before and after tooth filling treatment" },
+  { src: fillingsGallery5, alt: "Dental filling procedure with curing light" },
+  { src: fillingsGallery6, alt: "Close-up of dental filling examination" },
+];
 
 const DentalFillings = () => {
   const checklistItems = [
@@ -124,7 +139,7 @@ const DentalFillings = () => {
         </div>
       </section>
 
-      <ClinicalExcellence />
+      <ClinicalExcellence images={fillingsGalleryImages} />
     </Layout>
   );
 };
