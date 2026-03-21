@@ -6,6 +6,11 @@ import { Link } from 'react-router-dom';
 import checkupSmile from '@/assets/checkup-smile.png';
 import generalDentistryHero from '@/assets/general-dentistry-hero.jpg';
 import clinicalExcellence1 from '@/assets/clinical-excellence-1.jpg';
+import clinicalExcellence2 from '@/assets/clinical-excellence-2.jpg';
+import clinicalExcellence3 from '@/assets/clinical-excellence-3.jpg';
+import clinicalExcellence4 from '@/assets/clinical-excellence-4.jpg';
+import clinicalExcellence5 from '@/assets/clinical-excellence-5.jpg';
+import clinicalExcellence6 from '@/assets/clinical-excellence-6.jpg';
 
 const GeneralDentistry = () => {
   const checklistItems = [
