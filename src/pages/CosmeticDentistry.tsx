@@ -3,7 +3,7 @@ import ClinicalExcellence from '@/components/home/ClinicalExcellence';
 import { Button } from '@/components/ui/button';
 import { Check, Calendar, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import aboutDental1 from '@/assets/about-dental-1.jpg';
+import cosmeticConcerns from '@/assets/cosmetic-concerns.png';
 import cosmeticHero from '@/assets/cosmetic-hero.png';
 
 const CosmeticDentistry = () => {
