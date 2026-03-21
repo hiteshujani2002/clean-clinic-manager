@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Check, Calendar, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import extractionHero from '@/assets/extraction-hero.png';
-import aboutDental3 from '@/assets/about-dental-3.jpg';
+import extractionNecessary from '@/assets/extraction-necessary.png';
 
 const ToothExtraction = () => {
   const checklistItems = [
@@ -78,9 +78,9 @@ const ToothExtraction = () => {
             <div className="relative h-[350px] md:h-[400px]">
               <div className="w-full h-full rounded-2xl overflow-hidden shadow-lg">
                 <img
-                  src={aboutDental3}
-                  alt="Professional tooth extraction care"
-                  className="w-full h-full object-cover"
+                  src={extractionNecessary}
+                  alt="Dental extraction tools - when is extraction necessary"
+                  className="w-full h-full object-cover object-center"
                 />
               </div>
             </div>
