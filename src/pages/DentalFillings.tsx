@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Check, Calendar, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import fillingsHero from '@/assets/fillings-hero.png';
-import aboutDental3 from '@/assets/about-dental-3.jpg';
+import fillingsSigns from '@/assets/fillings-signs.png';
 
 const DentalFillings = () => {
   const checklistItems = [
