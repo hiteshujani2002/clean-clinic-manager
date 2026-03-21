@@ -127,7 +127,7 @@ const GeneralDentistry = () => {
         </div>
       </section>
 
-      <ClinicalExcellence />
+      <ClinicalExcellence images={[{ src: clinicalExcellence1, alt: "Dr. Jyoti's dental team in clinical attire" }]} />
     </Layout>
   );
 };
