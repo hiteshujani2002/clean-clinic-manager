@@ -78,9 +78,9 @@ const RootCanalTreatment = () => {
             <div className="relative h-[350px] md:h-[400px]">
               <div className="w-full h-full rounded-2xl overflow-hidden shadow-lg">
                 <img
-                  src={aboutDental3}
-                  alt="Patient smiling after root canal treatment"
-                  className="w-full h-full object-cover"
+                  src={rctSymptoms}
+                  alt="Woman experiencing tooth pain needing root canal"
+                  className="w-full h-full object-cover object-top"
                 />
               </div>
             </div>
