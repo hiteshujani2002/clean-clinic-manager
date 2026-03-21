@@ -78,9 +78,9 @@ const CosmeticDentistry = () => {
             <div className="relative h-[350px] md:h-[400px]">
               <div className="w-full h-full rounded-2xl overflow-hidden shadow-lg">
                 <img
-                  src={aboutDental1}
-                  alt="Cosmetic dental treatment results"
-                  className="w-full h-full object-cover"
+                  src={cosmeticConcerns}
+                  alt="Close-up of teeth showing aesthetic concerns"
+                  className="w-full h-full object-cover object-center"
                 />
               </div>
             </div>
