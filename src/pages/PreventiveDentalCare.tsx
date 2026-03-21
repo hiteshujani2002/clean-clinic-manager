@@ -139,7 +139,7 @@ const PreventiveDentalCare = () => {
         </div>
       </section>
 
-      <ClinicalExcellence />
+      <ClinicalExcellence images={preventiveGalleryImages} />
     </Layout>
   );
 };
