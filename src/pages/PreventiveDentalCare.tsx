@@ -5,6 +5,21 @@ import { Check, Calendar, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import preventiveHero from '@/assets/preventive-hero.png';
 import preventiveBenefits from '@/assets/preventive-benefits.png';
+import preventiveGallery1 from '@/assets/preventive-gallery-1.png';
+import preventiveGallery2 from '@/assets/preventive-gallery-2.png';
+import preventiveGallery3 from '@/assets/preventive-gallery-3.png';
+import preventiveGallery4 from '@/assets/preventive-gallery-4.png';
+import preventiveGallery5 from '@/assets/preventive-gallery-5.png';
+import preventiveGallery6 from '@/assets/preventive-gallery-6.png';
+
+const preventiveGalleryImages = [
+  { src: preventiveGallery1, alt: "Teeth alignment before and after preventive care" },
+  { src: preventiveGallery2, alt: "Dental restoration before and after treatment" },
+  { src: preventiveGallery3, alt: "Teeth whitening before and after results" },
+  { src: preventiveGallery4, alt: "Orthodontic treatment procedure in progress" },
+  { src: preventiveGallery5, alt: "Dental tools and equipment for preventive care" },
+  { src: preventiveGallery6, alt: "Modern dental clinic equipment" },
+];
 
 const PreventiveDentalCare = () => {
   const checklistItems = [
@@ -124,7 +139,7 @@ const PreventiveDentalCare = () => {
         </div>
       </section>
 
-      <ClinicalExcellence />
+      <ClinicalExcellence images={preventiveGalleryImages} />
     </Layout>
   );
 };
