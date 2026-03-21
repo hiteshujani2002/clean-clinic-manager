@@ -96,7 +96,7 @@ const GeneralDentistry = () => {
                 <img
                   src={checkupSmile}
                   alt="Healthy smile after dental check-up"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover object-[center_25%]"
                 />
               </div>
             </div>
