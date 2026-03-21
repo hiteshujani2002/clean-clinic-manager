@@ -32,9 +32,9 @@ const DentalFillings = () => {
             <div className="relative h-[350px] md:h-[420px]">
               <div className="w-full h-full rounded-2xl overflow-hidden shadow-lg">
                 <img
-                  src={aboutDental1}
-                  alt="Tooth-colored dental filling restoration at Dr. Jyoti's Dental Care"
-                  className="w-full h-full object-cover"
+                  src={fillingsHero}
+                  alt="Dental filling model showing tooth restoration"
+                  className="w-full h-full object-cover object-center"
                 />
               </div>
             </div>
