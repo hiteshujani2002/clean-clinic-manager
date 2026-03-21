@@ -3,7 +3,7 @@ import ClinicalExcellence from '@/components/home/ClinicalExcellence';
 import { Button } from '@/components/ui/button';
 import { Check, Calendar, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import aboutDental1 from '@/assets/about-dental-1.jpg';
+import scalingHero from '@/assets/scaling-hero.png';
 import aboutDental3 from '@/assets/about-dental-3.jpg';
 
 const TeethScalingPolishing = () => {
