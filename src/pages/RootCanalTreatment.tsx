@@ -3,7 +3,7 @@ import ClinicalExcellence from '@/components/home/ClinicalExcellence';
 import { Button } from '@/components/ui/button';
 import { Check, Calendar, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import aboutDental1 from '@/assets/about-dental-1.jpg';
+import rctHero from '@/assets/rct-hero.png';
 import aboutDental3 from '@/assets/about-dental-3.jpg';
 
 const RootCanalTreatment = () => {
@@ -32,7 +32,7 @@ const RootCanalTreatment = () => {
             <div className="relative h-[350px] md:h-[420px]">
               <div className="w-full h-full rounded-2xl overflow-hidden shadow-lg">
                 <img
-                  src={aboutDental1}
+                  src={rctHero}
                   alt="Modern root canal treatment setup at Dr. Jyoti's Dental Care"
                   className="w-full h-full object-cover"
                 />
