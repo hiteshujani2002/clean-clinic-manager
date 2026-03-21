@@ -139,7 +139,7 @@ const ToothExtraction = () => {
         </div>
       </section>
 
-      <ClinicalExcellence />
+      <ClinicalExcellence images={extractionGalleryImages} />
     </Layout>
   );
 };
