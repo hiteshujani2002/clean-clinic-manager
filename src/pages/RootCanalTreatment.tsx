@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Check, Calendar, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import rctHero from '@/assets/rct-hero.png';
-import aboutDental3 from '@/assets/about-dental-3.jpg';
+import rctSymptoms from '@/assets/rct-symptoms.png';
 
 const RootCanalTreatment = () => {
   const checklistItems = [
