@@ -3,9 +3,8 @@ import ClinicalExcellence from '@/components/home/ClinicalExcellence';
 import { Button } from '@/components/ui/button';
 import { Check, Calendar, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import aboutDental1 from '@/assets/about-dental-1.jpg';
-import aboutDental2 from '@/assets/about-dental-2.jpg';
 import aboutDental3 from '@/assets/about-dental-3.jpg';
+import generalDentistryHero from '@/assets/general-dentistry-hero.jpg';
 
 const GeneralDentistry = () => {
   const checklistItems = [
