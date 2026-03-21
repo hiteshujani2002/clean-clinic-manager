@@ -5,6 +5,21 @@ import { Check, Calendar, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import scalingHero from '@/assets/scaling-hero.png';
 import scalingTreatment from '@/assets/scaling-treatment.png';
+import scalingGallery1 from '@/assets/scaling-gallery-1.png';
+import scalingGallery2 from '@/assets/scaling-gallery-2.png';
+import scalingGallery3 from '@/assets/scaling-gallery-3.png';
+import scalingGallery4 from '@/assets/scaling-gallery-4.png';
+import scalingGallery5 from '@/assets/scaling-gallery-5.png';
+import scalingGallery6 from '@/assets/scaling-gallery-6.png';
+
+const scalingGalleryImages = [
+  { src: scalingGallery1, alt: "Patient receiving dental scaling treatment" },
+  { src: scalingGallery2, alt: "Dentist consulting with patient about oral health" },
+  { src: scalingGallery3, alt: "Before and after teeth scaling results" },
+  { src: scalingGallery4, alt: "Dr. Jyoti's Dental Care clinic setup" },
+  { src: scalingGallery5, alt: "Close-up of dental treatment results" },
+  { src: scalingGallery6, alt: "Dr. Jyoti with young patient at the clinic" },
+];
 
 const TeethScalingPolishing = () => {
   const checklistItems = [
