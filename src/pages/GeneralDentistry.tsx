@@ -3,9 +3,8 @@ import ClinicalExcellence from '@/components/home/ClinicalExcellence';
 import { Button } from '@/components/ui/button';
 import { Check, Calendar, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import aboutDental1 from '@/assets/about-dental-1.jpg';
-import aboutDental2 from '@/assets/about-dental-2.jpg';
 import aboutDental3 from '@/assets/about-dental-3.jpg';
+import generalDentistryHero from '@/assets/general-dentistry-hero.jpg';
 
 const GeneralDentistry = () => {
   const checklistItems = [
@@ -37,11 +36,11 @@ const GeneralDentistry = () => {
               </p>
             </div>
             <div className="relative h-[350px] md:h-[420px]">
-              <div className="w-full h-full rounded-2xl overflow-hidden shadow-lg">
+              <div className="w-full h-full rounded-xl overflow-hidden shadow-lg bg-background flex items-center justify-center">
                 <img
-                  src={aboutDental1}
-                  alt="General dentistry consultation at Dr. Jyoti's Dental Care"
-                  className="w-full h-full object-cover"
+                  src={generalDentistryHero}
+                  alt="Dr. Jyoti with a patient at Dr. Jyoti's Dental Care"
+                  className="w-full h-full object-contain object-top"
                 />
               </div>
             </div>
