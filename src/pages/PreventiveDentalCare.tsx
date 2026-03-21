@@ -78,7 +78,7 @@ const PreventiveDentalCare = () => {
             <div className="relative h-[350px] md:h-[400px]">
               <div className="w-full h-full rounded-2xl overflow-hidden shadow-lg">
                 <img
-                  src={aboutDental3}
+                  src={preventiveBenefits}
                   alt="Healthy smile through preventive dental care"
                   className="w-full h-full object-cover"
                 />
