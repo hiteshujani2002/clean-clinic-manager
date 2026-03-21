@@ -5,6 +5,21 @@ import { Check, Calendar, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import extractionHero from '@/assets/extraction-hero.png';
 import extractionNecessary from '@/assets/extraction-necessary.png';
+import extractionGallery1 from '@/assets/extraction-gallery-1.png';
+import extractionGallery2 from '@/assets/extraction-gallery-2.png';
+import extractionGallery3 from '@/assets/extraction-gallery-3.png';
+import extractionGallery4 from '@/assets/extraction-gallery-4.png';
+import extractionGallery5 from '@/assets/extraction-gallery-5.png';
+import extractionGallery6 from '@/assets/extraction-gallery-6.png';
+
+const extractionGalleryImages = [
+  { src: extractionGallery1, alt: "Dental extraction procedure in progress" },
+  { src: extractionGallery2, alt: "Patient receiving dental treatment with protective eyewear" },
+  { src: extractionGallery3, alt: "Before and after dental treatment results" },
+  { src: extractionGallery4, alt: "Dental team performing extraction procedure" },
+  { src: extractionGallery5, alt: "Dental implant screw - a second chance to smile" },
+  { src: extractionGallery6, alt: "Post-extraction dental work by Dr. Jyoti's Dental Care" },
+];
 
 const ToothExtraction = () => {
   const checklistItems = [
