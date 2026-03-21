@@ -139,7 +139,7 @@ const RootCanalTreatment = () => {
         </div>
       </section>
 
-      <ClinicalExcellence />
+      <ClinicalExcellence images={rctGalleryImages} />
     </Layout>
   );
 };
