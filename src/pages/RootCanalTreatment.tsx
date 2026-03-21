@@ -5,6 +5,21 @@ import { Check, Calendar, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import rctHero from '@/assets/rct-hero.png';
 import rctSymptoms from '@/assets/rct-symptoms.png';
+import rctGallery1 from '@/assets/rct-gallery-1.png';
+import rctGallery2 from '@/assets/rct-gallery-2.png';
+import rctGallery3 from '@/assets/rct-gallery-3.png';
+import rctGallery4 from '@/assets/rct-gallery-4.png';
+import rctGallery5 from '@/assets/rct-gallery-5.png';
+import rctGallery6 from '@/assets/rct-gallery-6.png';
+
+const rctGalleryImages = [
+  { src: rctGallery1, alt: "Root canal treatment procedure in progress" },
+  { src: rctGallery2, alt: "Dentist performing root canal therapy on patient" },
+  { src: rctGallery3, alt: "Dental professional demonstrating oral care techniques" },
+  { src: rctGallery4, alt: "Modern dental clinic during root canal treatment" },
+  { src: rctGallery5, alt: "Dentist using microscope for precision root canal work" },
+  { src: rctGallery6, alt: "Dental team performing advanced root canal procedure" },
+];
 
 const RootCanalTreatment = () => {
   const checklistItems = [
@@ -124,7 +139,7 @@ const RootCanalTreatment = () => {
         </div>
       </section>
 
-      <ClinicalExcellence />
+      <ClinicalExcellence images={rctGalleryImages} />
     </Layout>
   );
 };
