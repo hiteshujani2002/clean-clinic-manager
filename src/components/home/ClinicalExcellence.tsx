@@ -31,7 +31,7 @@ const ClinicalExcellence = ({ images = [] }: ClinicalExcellenceProps) => {
                     <img
                       src={image.src}
                       alt={image.alt}
-                      className="w-full h-full object-cover object-top"
+                      className="w-full h-full object-cover object-center"
                     />
                   ) : (
                     <div className="absolute inset-0 flex flex-col items-center justify-center gap-2 bg-muted group-hover:bg-muted-foreground/10 transition-colors">
