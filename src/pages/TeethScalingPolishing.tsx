@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Check, Calendar, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import scalingHero from '@/assets/scaling-hero.png';
-import aboutDental3 from '@/assets/about-dental-3.jpg';
+import scalingTreatment from '@/assets/scaling-treatment.png';
 
 const TeethScalingPolishing = () => {
   const checklistItems = [
