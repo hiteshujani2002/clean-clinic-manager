@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Check, Calendar, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import extractionHero from '@/assets/extraction-hero.png';
-import aboutDental3 from '@/assets/about-dental-3.jpg';
+import extractionNecessary from '@/assets/extraction-necessary.png';
 
 const ToothExtraction = () => {
   const checklistItems = [
