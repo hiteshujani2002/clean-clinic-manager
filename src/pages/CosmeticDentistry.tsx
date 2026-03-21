@@ -5,6 +5,21 @@ import { Check, Calendar, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import cosmeticConcerns from '@/assets/cosmetic-concerns.png';
 import cosmeticHero from '@/assets/cosmetic-hero.png';
+import cosmeticGallery1 from '@/assets/cosmetic-gallery-1.png';
+import cosmeticGallery2 from '@/assets/cosmetic-gallery-2.png';
+import cosmeticGallery3 from '@/assets/cosmetic-gallery-3.png';
+import cosmeticGallery4 from '@/assets/cosmetic-gallery-4.png';
+import cosmeticGallery5 from '@/assets/cosmetic-gallery-5.png';
+import cosmeticGallery6 from '@/assets/cosmetic-gallery-6.png';
+
+const cosmeticGalleryImages = [
+  { src: cosmeticGallery1, alt: "Cosmetic dental restoration before and after" },
+  { src: cosmeticGallery2, alt: "Dental bridge and crown transformation" },
+  { src: cosmeticGallery3, alt: "Teeth cleaning before and after results" },
+  { src: cosmeticGallery4, alt: "Teeth alignment before and after treatment" },
+  { src: cosmeticGallery5, alt: "Patient during cosmetic dental consultation" },
+  { src: cosmeticGallery6, alt: "Professional cosmetic dental procedure" },
+];
 
 const CosmeticDentistry = () => {
   const checklistItems = [
@@ -124,7 +139,7 @@ const CosmeticDentistry = () => {
         </div>
       </section>
 
-      <ClinicalExcellence />
+      <ClinicalExcellence images={cosmeticGalleryImages} />
     </Layout>
   );
 };
