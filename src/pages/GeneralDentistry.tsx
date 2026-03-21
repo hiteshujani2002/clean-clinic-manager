@@ -132,7 +132,14 @@ const GeneralDentistry = () => {
         </div>
       </section>
 
-      <ClinicalExcellence images={[{ src: clinicalExcellence1, alt: "Dr. Jyoti's dental team in clinical attire" }]} />
+      <ClinicalExcellence images={[
+        { src: clinicalExcellence1, alt: "Dr. Jyoti's dental team in clinical attire" },
+        { src: clinicalExcellence2, alt: "Patient smile after dental treatment" },
+        { src: clinicalExcellence3, alt: "Dental procedure in progress" },
+        { src: clinicalExcellence4, alt: "Dentist performing oral examination" },
+        { src: clinicalExcellence5, alt: "Child brushing teeth for oral hygiene" },
+        { src: clinicalExcellence6, alt: "Dentist consulting with patient" },
+      ]} />
     </Layout>
   );
 };
