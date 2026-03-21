@@ -139,7 +139,7 @@ const TeethScalingPolishing = () => {
         </div>
       </section>
 
-      <ClinicalExcellence />
+      <ClinicalExcellence images={scalingGalleryImages} />
     </Layout>
   );
 };
