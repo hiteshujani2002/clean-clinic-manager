@@ -35,12 +35,12 @@ const GeneralDentistry = () => {
                 During the cleaning, a hygienist uses specialized tools to scale away hardened deposits and polish the teeth for a smooth, clean finish.
               </p>
             </div>
-            <div className="relative h-[280px] md:h-[340px]">
+            <div className="relative h-[320px] md:h-[400px] max-w-[420px] mx-auto lg:ml-auto lg:mr-0">
               <div className="w-full h-full rounded-xl overflow-hidden shadow-lg bg-background">
                 <img
                   src={generalDentistryHero}
                   alt="Dr. Jyoti with a patient at Dr. Jyoti's Dental Care"
-                  className="w-full h-full object-contain object-top"
+                  className="w-full h-full object-cover object-top"
                 />
               </div>
             </div>
