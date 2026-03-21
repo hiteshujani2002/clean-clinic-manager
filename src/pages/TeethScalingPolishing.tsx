@@ -32,9 +32,9 @@ const TeethScalingPolishing = () => {
             <div className="relative h-[350px] md:h-[420px]">
               <div className="w-full h-full rounded-2xl overflow-hidden shadow-lg">
                 <img
-                  src={aboutDental1}
+                  src={scalingHero}
                   alt="Professional teeth scaling and polishing at Dr. Jyoti's Dental Care"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover object-[center_30%]"
                 />
               </div>
             </div>
