@@ -94,7 +94,7 @@ const GeneralDentistry = () => {
             <div className="relative h-[350px] md:h-[400px]">
               <div className="w-full h-full rounded-2xl overflow-hidden shadow-lg">
                 <img
-                  src={aboutDental3}
+                  src={checkupSmile}
                   alt="Healthy smile after dental check-up"
                   className="w-full h-full object-cover"
                 />
