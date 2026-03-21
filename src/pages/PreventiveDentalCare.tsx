@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Check, Calendar, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import preventiveHero from '@/assets/preventive-hero.png';
-import aboutDental3 from '@/assets/about-dental-3.jpg';
+import preventiveBenefits from '@/assets/preventive-benefits.png';
 
 const PreventiveDentalCare = () => {
   const checklistItems = [
@@ -78,7 +78,7 @@ const PreventiveDentalCare = () => {
             <div className="relative h-[350px] md:h-[400px]">
               <div className="w-full h-full rounded-2xl overflow-hidden shadow-lg">
                 <img
-                  src={aboutDental3}
+                  src={preventiveBenefits}
                   alt="Healthy smile through preventive dental care"
                   className="w-full h-full object-cover"
                 />
