@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Check, Calendar, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import preventiveHero from '@/assets/preventive-hero.png';
-import aboutDental3 from '@/assets/about-dental-3.jpg';
+import preventiveBenefits from '@/assets/preventive-benefits.png';
 
 const PreventiveDentalCare = () => {
   const checklistItems = [
